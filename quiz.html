@@ -18,10 +18,10 @@
                             <!-- Mobile menu button -->
                             <button type="button" id="menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
                                 <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+                                <svg class="block h-12 w-12" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
+                                <svg class="hidden h-12 w-12" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </button>
@@ -53,7 +53,142 @@
             </nav>
         </header>
         <main>
-            <!-- Content goes here -->
+            <div class="bg-white py-16 sm:py-24">
+                <div class="mx-auto px-6 lg:px-8">
+                    <div class="mb-8">
+                        <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Quiz</h2>
+                        <p class="mt-6 text-lg text-gray-600">Du hast auf der Reise über diese Seite viel über das Thema virales Marketing gelernt. Zeit dein Wissen auf die Probe zu stellen! Auf dieser Seite sind diverse Werbespots aufgelistet. Einige davon sind besser, andere weniger gut. Deine Aufgabe ist es nun jeden dieser Spots anzuschauen und deine Bewertung abzugeben. Nach Bestätigen deiner Einschätzung des Werbespots siehst du einerseits die durchschnittliche Bewertung aller Benutzer und du siehst unsere Bewertung als Experten. Auf die Plätze, fertig, los!</p>
+                    </div>
+                    <div class="bg-white">
+                        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                          <div>
+                            <div class="rounded-2xl">
+                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <form action="#" method="POST" id="ad-1" class="mt-8 flex justify-between items-center">
+
+                              <div>
+                                <div class="flex items-center space-x-2">
+                                  <!-- Star buttons -->
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="mt-0">
+                                <button type="button" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="mt-24">
+                            <div class="rounded-2xl">
+                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <form action="#" method="POST" id="ad-2" class="mt-8 flex justify-between items-center">
+
+                              <div>
+                                <div class="flex items-center space-x-2">
+                                  <!-- Star buttons -->
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="mt-0">
+                                <button type="button" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="mt-24">
+                            <div class="rounded-2xl">
+                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <form action="#" method="POST" id="ad-3" class="mt-8 flex justify-between items-center">
+
+                              <div>
+                                <div class="flex items-center space-x-2">
+                                  <!-- Star buttons -->
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="mt-0">
+                                <button type="button" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
         </main>
         </div>
         <script src="scripts/auth.js"></script>
@@ -61,5 +196,20 @@
         <script>
             setSessionToken();
         </script>
+<script>
+    document.querySelectorAll('button[data-rating]').forEach(button => {
+      button.addEventListener('click', function() {
+        const rating = this.getAttribute('data-rating');
+        document.querySelectorAll('button[data-rating]').forEach(btn => {
+          btn.classList.remove('text-yellow-400');
+          btn.classList.add('text-gray-300');
+        });
+        for (let i = 1; i <= rating; i++) {
+          document.querySelector(`button[data-rating="${i}"]`).classList.remove('text-gray-300');
+          document.querySelector(`button[data-rating="${i}"]`).classList.add('text-yellow-400');
+        }
+      });
+    });
+  </script>
     </body>
 </html>
