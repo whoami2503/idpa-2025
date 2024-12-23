@@ -9,66 +9,100 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            <nav class="bg-white shadow">
-                <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                    <div class="relative flex h-16 justify-between">
-                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                            <!-- Mobile menu button -->
-                            <button type="button" id="menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                            <div class="flex shrink-0 items-center">
-                                <div class="h-8 w-8 rounded-full bg-green-500"></div>                            
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <header>
+                <nav class="bg-white">
+                    <div class="mx-auto px-2 sm:px-6 lg:px-8">
+                        <div class="relative flex h-16 justify-between">
+                            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                                <!-- Mobile menu button -->
+                                <button type="button" id="menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
                             </div>
-                            <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
-                                <a href="index.html" class="inline-flex items-center border-b-2  border-transparent  px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
-                                <a href="examples.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Gute Beispiele</a>
-                                <a href="quiz.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
-                                <a href="research.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview & Recherche</a>
-                                <a href="about.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 text-green-500 border-green-500 hover:border-gray-300 hover:text-gray-700">Über uns</a>
-
+                            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                                <div class="flex shrink-0 items-center">
+                                    <div class="h-8 w-8 rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
+                                    <a href="index.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
+                                    <a href="examples.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Gute Beispiele</a>
+                                    <a href="quiz.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
+                                    <a href="research.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview & Recherche</a>
+                                    <a href="about.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 text-green-500 border-green-500 hover:border-gray-300 hover:text-gray-700">Über uns</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Mobile menu -->
-                <div class="hidden sm:hidden" id="mobile-menu">
-                    <div class="space-y-1 pb-4 pt-2">
-                        <a href="index.html" class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
-                        <a href="examples.html" class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Gute Beispiele</a>
-                        <a href="quiz.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
-                        <a href="research.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview & Recherche</a>
-                        <a href="about.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-green-500 bg-green-50 text-green-700  hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über uns</a>
+                    <!-- Mobile menu -->
+                    <div class="hidden sm:hidden" id="mobile-menu">
+                        <div class="space-y-1 pb-4 pt-2">
+                            <a href="index.html" class="block border-l-4 border-transparent text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
+                            <a href="examples.html" class="block border-l-4 border-transparent text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Gute Beispiele</a>
+                            <a href="quiz.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
+                            <a href="research.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview & Recherche</a>
+                            <a href="about.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-green-500 bg-green-50 text-green-700 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über uns</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="bg-white py-16 sm:py-24">
+                    <div class="mx-auto px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl lg:mx-0">
+                            <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Unser Team</h2>
+                            <p class="mt-6 text-lg text-gray-600">Wir sind Informatiker Fachrichtung Applikationsentwickler EFZ im 4. Lehrjahr an der Gibb Berufsschule Bern. Wir alle haben über die Ausbildung verteilt Einblicke in diverse Aspekte des Berufes erhalten. Wir alle sind spezialisiert auf die Arbeit mit Datenbanken, Schnittstellen und Benutzerinterfaces. Neben der technischen Seite des Berufes erhalten wir auch immer wieder Einsichten in die wirtschaftliche Welt der Informatik. Wir müssen Software so gestalten dass sie nicht nur zweckdienlich ist sondern auch den Benutzer anspricht und dazu motiviert, mehr über das Produkt oder die Dienstleistung zu erfahren.</p>
+                        </div>
+                        <ul class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                            <li>
+                                <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://media.licdn.com/dms/image/v2/D4E03AQFOMWPy-O_rNQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690533043208?e=1740614400&v=beta&t=rjOnw_CUvRS-2f2NK_k4zgCGcP_oxs3lwEOIFlVK1q8" alt="Ilian Häsler">
+                                <h3 class="mt-6 text-lg font-semibold tracking-tight text-gray-900">Ilian Häsler</h3>
+                                <p class="text-base text-gray-600 mb-3">Full-Stack Entwickler</p>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16l80 0 0-64c0-26.5 21.5-48 48-48s48 21.5 48 48l0 64 80 0c8.8 0 16-7.2 16-16l0-384c0-8.8-7.2-16-16-16L64 48zM0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm88 40c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zM232 88l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zm144-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16z"/></svg>
+                                    <a href="https://www.89grad.ch/" class="text-base text-black underline font-medium ml-2">89grad GmbH</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://media.licdn.com/dms/image/v2/D4E03AQE2nAS-Bfvs1Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699884421888?e=1740614400&v=beta&t=MtW3Wb0CTiF8UApFkgu-T09hjYN8UnQKEDpbOSokhXI" alt="Manuel Meier">
+                                <h3 class="mt-6 text-lg font-semibold tracking-tight text-gray-900">Manuel Meier</h3>
+                                <p class="text-base text-gray-600 mb-3">Full-Stack Entwickler</p>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16l80 0 0-64c0-26.5 21.5-48 48-48s48 21.5 48 48l0 64 80 0c8.8 0 16-7.2 16-16l0-384c0-8.8-7.2-16-16-16L64 48zM0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm88 40c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zM232 88l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zm144-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16z"/></svg>
+                                    <a href="https://www.postfinance.ch/de/privat.html" class="text-base text-black underline font-medium ml-2">PostFinance</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://media.licdn.com/dms/image/v2/D4E03AQEdk3MdsjiYPQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688459807619?e=1740614400&v=beta&t=hrpaB1tpk-ySHitDI_V1kgR33XZxl4DRKDXtIrWuhiU" alt="Tobias Jenny">
+                                <h3 class="mt-6 text-lg font-semibold tracking-tight text-gray-900">Tobias Jenny</h3>
+                                <p class="text-base text-gray-600 mb-3">Full-Stack Entwickler</p>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16l80 0 0-64c0-26.5 21.5-48 48-48s48 21.5 48 48l0 64 80 0c8.8 0 16-7.2 16-16l0-384c0-8.8-7.2-16-16-16L64 48zM0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm88 40c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zM232 88l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zm144-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16z"/></svg>
+                                    <a href="https://www.postfinance.ch/de/privat.html" class="text-base text-black underline font-medium ml-2">PostFinance</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://i.pinimg.com/280x280_RS/99/2e/12/992e120107353ba4d11dd9616a866f12.jpg" alt="Joshua Azariah">
+                                <h3 class="mt-6 text-lg font-semibold tracking-tight text-gray-900">Joshua Azariah</h3>
+                                <p class="text-base text-gray-600 mb-3">Full-Stack Entwickler</p>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16l80 0 0-64c0-26.5 21.5-48 48-48s48 21.5 48 48l0 64 80 0c8.8 0 16-7.2 16-16l0-384c0-8.8-7.2-16-16-16L64 48zM0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm88 40c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zM232 88l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zm144-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16z"/></svg>
+                                    <a href="https://www.postfinance.ch/de/privat.html" class="text-base text-black underline font-medium ml-2">PostFinance</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <!-- Content goes here -->
-        </main>
+            </main>
+        </div>
         <script src="scripts/auth.js"></script>
-        <script>
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuOpenIcon = document.getElementById('menu-open-icon');
-            const menuCloseIcon = document.getElementById('menu-close-icon');
-
-            menuButton.addEventListener('click', () => {
-                const isMenuOpen = mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden', !isMenuOpen);
-                menuOpenIcon.classList.toggle('hidden', isMenuOpen);
-                menuCloseIcon.classList.toggle('hidden', !isMenuOpen);
-            });
-        </script>
+        <script src="scripts/menu.js"></script>
         <script>
             setSessionToken();
         </script>

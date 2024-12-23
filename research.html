@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
         <header>
-            <nav class="bg-white shadow">
-                <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <nav class="bg-white">
+                <div class="mx-auto   px-2 sm:px-6 lg:px-8">
                     <div class="relative flex h-16 justify-between">
                         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                             <!-- Mobile menu button -->
@@ -27,7 +28,7 @@
                         </div>
                         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                             <div class="flex shrink-0 items-center">
-                                <div class="h-8 w-8 rounded-full bg-green-500"></div>                            
+                                <div class="h-8 w-8 rounded-full bg-green-500"></div>
                             </div>
                             <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
                                 <a href="index.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
@@ -54,20 +55,9 @@
         <main>
             <!-- Content goes here -->
         </main>
+        </div>
         <script src="scripts/auth.js"></script>
-        <script>
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuOpenIcon = document.getElementById('menu-open-icon');
-            const menuCloseIcon = document.getElementById('menu-close-icon');
-
-            menuButton.addEventListener('click', () => {
-                const isMenuOpen = mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden', !isMenuOpen);
-                menuOpenIcon.classList.toggle('hidden', isMenuOpen);
-                menuCloseIcon.classList.toggle('hidden', !isMenuOpen);
-            });
-        </script>
+        <script src="scripts/menu.js"></script>
         <script>
             setSessionToken();
         </script>
