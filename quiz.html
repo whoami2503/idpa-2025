@@ -63,9 +63,9 @@
                         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                           <div>
                             <div class="rounded-2xl">
-                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <form action="#" method="POST" id="ad-1" class="mt-8 flex justify-between items-center">
+                            <form action="#" method="GET" id="ad-1" class="mt-8 flex justify-between items-center">
 
                               <div>
                                 <div class="flex items-center space-x-2">
@@ -98,15 +98,15 @@
                                 </div>
                               </div>
                               <div class="mt-0">
-                                <button type="button" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                <button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
                               </div>
                             </form>
                           </div>
                           <div class="mt-24">
                             <div class="rounded-2xl">
-                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <form action="#" method="POST" id="ad-2" class="mt-8 flex justify-between items-center">
+                            <form action="#" method="GET" id="ad-2" class="mt-8 flex justify-between items-center">
 
                               <div>
                                 <div class="flex items-center space-x-2">
@@ -139,15 +139,15 @@
                                 </div>
                               </div>
                               <div class="mt-0">
-                                <button type="button" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                <button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
                               </div>
                             </form>
                           </div>
                           <div class="mt-24">
                             <div class="rounded-2xl">
-                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <form action="#" method="POST" id="ad-3" class="mt-8 flex justify-between items-center">
+                            <form action="#" method="GET" id="ad-3" class="mt-8 flex justify-between items-center">
 
                               <div>
                                 <div class="flex items-center space-x-2">
@@ -180,7 +180,7 @@
                                 </div>
                               </div>
                               <div class="mt-0">
-                                <button type="button" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                <button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
                               </div>
                             </form>
                           </div>
@@ -192,24 +192,11 @@
         </main>
         </div>
         <script src="scripts/auth.js"></script>
-        <script src="scripts/menu.js"></script>
+        <script src="scripts/menu.js"></script>$
+        <script src="scripts/quiz.js"></script>
         <script>
             setSessionToken();
         </script>
-<script>
-    document.querySelectorAll('button[data-rating]').forEach(button => {
-      button.addEventListener('click', function() {
-        const rating = this.getAttribute('data-rating');
-        document.querySelectorAll('button[data-rating]').forEach(btn => {
-          btn.classList.remove('text-yellow-400');
-          btn.classList.add('text-gray-300');
-        });
-        for (let i = 1; i <= rating; i++) {
-          document.querySelector(`button[data-rating="${i}"]`).classList.remove('text-gray-300');
-          document.querySelector(`button[data-rating="${i}"]`).classList.add('text-yellow-400');
-        }
-      });
-    });
-  </script>
+
     </body>
 </html>
