@@ -154,8 +154,4 @@ async function checkUserVotes() {
       }
     }
   }
-
-
-document.addEventListener('DOMContentLoaded', async () => {
-    checkUserVotes();
-});
+  checkUserVotes();
