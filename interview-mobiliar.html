@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,176 +9,198 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-<div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-    <header>
-        <nav class="bg-white">
-            <div class="mx-auto   px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-16 justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button -->
-                        <button type="button" id="menu-button"
+    <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+        <header>
+            <nav class="bg-white">
+                <div class="mx-auto   px-2 sm:px-6 lg:px-8">
+                    <div class="relative flex h-16 justify-between">
+                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                            <!-- Mobile menu button -->
+                            <button type="button" id="menu-button"
                                 class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
                                 aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true" id="menu-open-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                            </svg>
-                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true" id="menu-close-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div class="flex shrink-0 items-center">
-                            <div class="h-8 w-8 rounded-full bg-green-500"></div>
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" id="menu-close-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                         </div>
-                        <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
-                            <a href="index.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
-                            <a href="examples.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Gute
-                                Beispiele</a>
-                            <a href="quiz.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
-                            <a href="research.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-green-500 border-green-500 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
-                                & Recherche</a>
-                            <a href="about.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
-                                uns</a>
+                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                            <div class="flex shrink-0 items-center">
+                                <div class="h-8 w-8 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
+                                <a href="index.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
+                                <a href="examples.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Gute
+                                    Beispiele</a>
+                                <a href="quiz.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
+                                <a href="research.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-green-500 border-green-500 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
+                                    & Recherche</a>
+                                <a href="about.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
+                                    uns</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Mobile menu -->
-            <div class="hidden sm:hidden" id="mobile-menu">
-                <div class="space-y-1 pb-4 pt-2">
-                    <a href="index.html"
-                       class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
-                    <a href="examples.html"
-                       class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Gute
-                        Beispiele</a>
-                    <a href="quiz.html"
-                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
-                    <a href="research.html"
-                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium border-green-500 bg-green-50 text-green-700  hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
-                        & Recherche</a>
-                    <a href="about.html"
-                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
-                        uns</a>
+                <!-- Mobile menu -->
+                <div class="hidden sm:hidden" id="mobile-menu">
+                    <div class="space-y-1 pb-4 pt-2">
+                        <a href="index.html"
+                            class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
+                        <a href="examples.html"
+                            class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Beispiele</a>
+                        <a href="quiz.html"
+                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
+                        <a href="research.html"
+                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium border-green-500 bg-green-50 text-green-700  hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
+                            & Recherche</a>
+                        <a href="about.html"
+                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
+                            uns</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="bg-white py-16 sm:py-24">
-            <div class="mx-auto px-6 lg:px-8">
-                <div class="mx-auto lg:mx-0">
-                    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Interview
-                        mit der Mobiliar</h2>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Wie lange arbeitet ihr schon mit dem Comic-Stil, und warum
-                            haben
-                            ihr euch für dieses Format entschieden?</p>
-                        <p class="mt-2">Die Schadenskizzen und Liebe Mobiliar Kampagnen gibt es bereits seit 26 Jahren.
-                            Sie entstand aus einem Schadenfall, welcher der Kunde bei der Mobiliar meldete. Schadenfälle
-                            gehören zum Leben dazu und wenn es so weit ist, dann hilft die Mobiliar rasch und
-                            unkompliziert. Mit diesem Claim haben wir uns vom Wettbewerb differenziert und sagen, dass
-                            Schäden zum Leben dazugehören und wir helfen, wenn es dazu kommt. <br><br>Links zu diesem
-                            Thema:</p>
-                        <div class="mt-4">
-                            <a
-                                    href="https://www.persoenlich.com/mediapartner/liebe-mobiliar-als-du-vor-25-jahren"
+            </nav>
+        </header>
+        <main>
+            <div class="bg-white py-16 sm:py-24">
+                <div class="mx-auto px-6 lg:px-8">
+                    <div class="mx-auto lg:mx-0">
+                        <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                            Interview
+                            mit der Mobiliar</h2>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Wie lange arbeitet ihr schon mit dem Comic-Stil, und
+                                warum
+                                haben
+                                ihr euch für dieses Format entschieden?</p>
+                            <p class="mt-2">Die Schadenskizzen und Liebe Mobiliar Kampagnen gibt es bereits seit 26
+                                Jahren.
+                                Sie entstand aus einem Schadenfall, welcher der Kunde bei der Mobiliar meldete.
+                                Schadenfälle
+                                gehören zum Leben dazu und wenn es so weit ist, dann hilft die Mobiliar rasch und
+                                unkompliziert. Mit diesem Claim haben wir uns vom Wettbewerb differenziert und sagen,
+                                dass
+                                Schäden zum Leben dazugehören und wir helfen, wenn es dazu kommt. <br><br>Links zu
+                                diesem
+                                Thema:</p>
+                            <div class="mt-4">
+                                <a href="https://www.persoenlich.com/mediapartner/liebe-mobiliar-als-du-vor-25-jahren"
                                     class="underline text-green-500">https://www.persoenlich.com/mediapartner/liebe-mobiliar-als-du-vor-25-jahren</a>
-                            <br>
-                            <a
-                                    href="https://www.persoenlich.com/werbung/einen-avatar-fur-mobiliar-plakate-kreieren"
+                                <br>
+                                <a href="https://www.persoenlich.com/werbung/einen-avatar-fur-mobiliar-plakate-kreieren"
                                     class="underline text-green-500">https://www.persoenlich.com/werbung/einen-avatar-fur-mobiliar-plakate-kreieren</a>
-                            <br>
-                            <a
-                                    href="https://www.youtube.com/user/diemobiliar"
+                                <br>
+                                <a href="https://www.youtube.com/user/diemobiliar"
                                     class="underline text-green-500">https://www.youtube.com/user/diemobiliar</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Gibt es eine bestimmte Zielgruppe, welche ihr mit dieser
-                            Werbung besonders ansprechen möchtet?</p>
-                        <p class="mt-2">Unsere Zielgruppen auf diesen beiden Kampagnen ist relativ breit. Für bestimmte
-                            Skizzen konzentrieren wir uns aber auch mal auf bestimmte Kundengruppen wie KMU, Jugendliche
-                            oder auf die Westschweiz.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Wie läuft der Prozess ab, um einen echten Schadenfall in
-                            eine humorvolle Werbeanzeige zu verwandeln? Wer entscheidet, welche Schadenfälle in die
-                            Werbung aufgenommen werden?</p>
-                        <p class="mt-2">Wir lassen uns immer wieder von echten Schadenfällen inspirieren. Beim Konzept
-                            Schadenskizzen sind dann nebst den Strichmännchen auch die Wortspiele relevant, welche
-                            unsere Kreativagentur mitentwickelt. Bei den Liebe Mobiliar Spots kommt es auf eine gute
-                            Geschichte mit Überraschungsmoment, menschlichen Missgeschicken und vor allem auf den Humor
-                            an. Die Sympathie und das Nahbare sind uns in den Geschichten sehr wichtig.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Welche Rolle spielt die Schweizer Kultur und Lokalkolorit
-                            bei der Gestaltung der Kampagnen?</p>
-                        <p class="mt-2">Schadenskizzen werden als speziell sympathisch bewertet, wenn wir auch
-                            schweizerdeutsche Wortspiele einfügen oder eben auch ganz spezifische Themen und
-                            Schadenfälle aus Regionen aufnehmen.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Gibt es Überlegungen, das Konzept der Schadenberichte in
-                            neue Formate oder Medien zu übertragen?</p>
-                        <p class="mt-2">Es gibt nicht nur Überlegungen, sondern wir setzten dies auch schon länger ein.
-                            Die Schadenskizzen gibt es in Vollanimation für Online und TV, in einfacher Animation für
-                            Social Media oder digitale Plakate. In unserer Jubiläums-Kampagne vom letzten Jahr konnte
-                            man sich selbst einen Schadenskizzen-Avatar erstellen.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Wie bleibt ihr kreativ, um das Konzept frisch und
-                            interessant zu halten?</p>
-                        <p class="mt-2">Es wird immer Schadenfälle geben und diese spielen auch die "neuen" Risiken
-                            unserer Welt. Beispielsweise werden neu auch Schadenfälle im Cyberbereich aufgenommen. Zudem
-                            nehmen wir auch Aktualitäten auf und reagieren zeitnah. Ein Beispiel von diesem Jahr war der
-                            Schadenfall der Nemo am ESC passiert ist.</p>
-                        <div class="mt-4">
-                            <a
-                                    href="https://www.persoenlich.com/werbung/mehr-als-eine-schadensskizze-fur-nemo"
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Gibt es eine bestimmte Zielgruppe, welche ihr mit
+                                dieser
+                                Werbung besonders ansprechen möchtet?</p>
+                            <p class="mt-2">Unsere Zielgruppen auf diesen beiden Kampagnen ist relativ breit. Für
+                                bestimmte
+                                Skizzen konzentrieren wir uns aber auch mal auf bestimmte Kundengruppen wie KMU,
+                                Jugendliche
+                                oder auf die Westschweiz.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Wie läuft der Prozess ab, um einen echten Schadenfall
+                                in
+                                eine humorvolle Werbeanzeige zu verwandeln? Wer entscheidet, welche Schadenfälle in die
+                                Werbung aufgenommen werden?</p>
+                            <p class="mt-2">Wir lassen uns immer wieder von echten Schadenfällen inspirieren. Beim
+                                Konzept
+                                Schadenskizzen sind dann nebst den Strichmännchen auch die Wortspiele relevant, welche
+                                unsere Kreativagentur mitentwickelt. Bei den Liebe Mobiliar Spots kommt es auf eine gute
+                                Geschichte mit Überraschungsmoment, menschlichen Missgeschicken und vor allem auf den
+                                Humor
+                                an. Die Sympathie und das Nahbare sind uns in den Geschichten sehr wichtig.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Welche Rolle spielt die Schweizer Kultur und
+                                Lokalkolorit
+                                bei der Gestaltung der Kampagnen?</p>
+                            <p class="mt-2">Schadenskizzen werden als speziell sympathisch bewertet, wenn wir auch
+                                schweizerdeutsche Wortspiele einfügen oder eben auch ganz spezifische Themen und
+                                Schadenfälle aus Regionen aufnehmen.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Gibt es Überlegungen, das Konzept der Schadenberichte
+                                in
+                                neue Formate oder Medien zu übertragen?</p>
+                            <p class="mt-2">Es gibt nicht nur Überlegungen, sondern wir setzten dies auch schon länger
+                                ein.
+                                Die Schadenskizzen gibt es in Vollanimation für Online und TV, in einfacher Animation
+                                für
+                                Social Media oder digitale Plakate. In unserer Jubiläums-Kampagne vom letzten Jahr
+                                konnte
+                                man sich selbst einen Schadenskizzen-Avatar erstellen.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Wie bleibt ihr kreativ, um das Konzept frisch und
+                                interessant zu halten?</p>
+                            <p class="mt-2">Es wird immer Schadenfälle geben und diese spielen auch die "neuen" Risiken
+                                unserer Welt. Beispielsweise werden neu auch Schadenfälle im Cyberbereich aufgenommen.
+                                Zudem
+                                nehmen wir auch Aktualitäten auf und reagieren zeitnah. Ein Beispiel von diesem Jahr war
+                                der
+                                Schadenfall der Nemo am ESC passiert ist.</p>
+                            <div class="mt-4">
+                                <a href="https://www.persoenlich.com/werbung/mehr-als-eine-schadensskizze-fur-nemo"
                                     class="underline text-green-500">https://www.persoenlich.com/werbung/mehr-als-eine-schadensskizze-fur-nemo</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Welche Rolle spielt Social Media in der Verbreitung eurer
-                            Kampagnen?</p>
-                        <p class="mt-2">Wir nutzen Social Media bei allen Kampagnen auch als Mediakanal. Social Media
-                            ist im Mediamix nicht wegzudenken. Es bringt aber vor allem dann einen Mehrwert, wenn sich
-                            Aktualitätsposts (wie das oben genannte Beispiel von Nemo) verbreiten.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Wo seht ihr die Zukunft der Werbung für die Mobiliar, und
-                            welche neuen Trends möchtet ihr nutzen?</p>
-                        <p class="mt-2">Wir möchten uns weiterhin durch unseren Humor von der Konkurrenz abheben und
-                            natürlich mit der Entwicklung der Mediennutzung mitgehen. Neues auszuprobieren gehört dazu
-                            und bringt uns Learnings.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Was würdet ihr anderen Unternehmen raten, die eine
-                            humorvolle Werbung umsetzen möchten?</p>
-                        <p class="mt-2">Dass Humor sehr vielschichtig ist und es echte und nahbare Geschichten braucht,
-                            um als sympathisch und professionell wahrgenommen zu werden. Hier setzen auch wir auf
-                            Pretest mit Marktforschung.</p>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Welche Rolle spielt Social Media in der Verbreitung
+                                eurer
+                                Kampagnen?</p>
+                            <p class="mt-2">Wir nutzen Social Media bei allen Kampagnen auch als Mediakanal. Social
+                                Media
+                                ist im Mediamix nicht wegzudenken. Es bringt aber vor allem dann einen Mehrwert, wenn
+                                sich
+                                Aktualitätsposts (wie das oben genannte Beispiel von Nemo) verbreiten.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Wo seht ihr die Zukunft der Werbung für die Mobiliar,
+                                und
+                                welche neuen Trends möchtet ihr nutzen?</p>
+                            <p class="mt-2">Wir möchten uns weiterhin durch unseren Humor von der Konkurrenz abheben und
+                                natürlich mit der Entwicklung der Mediennutzung mitgehen. Neues auszuprobieren gehört
+                                dazu
+                                und bringt uns Learnings.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Was würdet ihr anderen Unternehmen raten, die eine
+                                humorvolle Werbung umsetzen möchten?</p>
+                            <p class="mt-2">Dass Humor sehr vielschichtig ist und es echte und nahbare Geschichten
+                                braucht,
+                                um als sympathisch und professionell wahrgenommen zu werden. Hier setzen auch wir auf
+                                Pretest mit Marktforschung.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-</div>
-<script src="scripts/auth.js"></script>
-<script src="scripts/menu.js"></script>
-<script>
-    setSessionToken();
-</script>
+        </main>
+    </div>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script>
+        setSessionToken();
+    </script>
 </body>
+
 </html>

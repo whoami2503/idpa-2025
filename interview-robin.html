@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,144 +9,157 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-<div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-    <header>
-        <nav class="bg-white">
-            <div class="mx-auto   px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-16 justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button -->
-                        <button type="button" id="menu-button"
+    <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+        <header>
+            <nav class="bg-white">
+                <div class="mx-auto   px-2 sm:px-6 lg:px-8">
+                    <div class="relative flex h-16 justify-between">
+                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                            <!-- Mobile menu button -->
+                            <button type="button" id="menu-button"
                                 class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
                                 aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true" id="menu-open-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                            </svg>
-                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true" id="menu-close-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div class="flex shrink-0 items-center">
-                            <div class="h-8 w-8 rounded-full bg-green-500"></div>
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" id="menu-close-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                         </div>
-                        <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
-                            <a href="index.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
-                            <a href="examples.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Gute
-                                Beispiele</a>
-                            <a href="quiz.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
-                            <a href="research.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-green-500 border-green-500 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
-                                & Recherche</a>
-                            <a href="about.html"
-                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
-                                uns</a>
+                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                            <div class="flex shrink-0 items-center">
+                                <div class="h-8 w-8 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
+                                <a href="index.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
+                                <a href="examples.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                                    Beispiele</a>
+                                <a href="quiz.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
+                                <a href="research.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-green-500 border-green-500 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
+                                    & Recherche</a>
+                                <a href="about.html"
+                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
+                                    uns</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile menu -->
+                <div class="hidden sm:hidden" id="mobile-menu">
+                    <div class="space-y-1 pb-4 pt-2">
+                        <a href="index.html"
+                            class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
+                        <a href="examples.html"
+                            class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Gute
+                            Beispiele</a>
+                        <a href="quiz.html"
+                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
+                        <a href="research.html"
+                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium border-green-500 bg-green-50 text-green-700  hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
+                            & Recherche</a>
+                        <a href="about.html"
+                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
+                            uns</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="bg-white py-16 sm:py-24">
+                <div class="mx-auto px-6 lg:px-8">
+                    <div class="mx-auto lg:mx-0">
+                        <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                            Interview
+                            mit Robin Horner</h2>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Auf welche Arten betreibst du Marketing bei Kunden von
+                                GoBrand oder Freeways?</p>
+                            <p class="mt-2">Facebook, Instagram, TikTok, Google, Pinterest, YouTube und Taboola.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Welche davon lohnen sich am meisten?</p>
+                            <p class="mt-2">Alles, was profitabel ist, lohnt sich. Aber am meisten wird durch Meta
+                                (Facebook
+                                und Instagram) gemacht.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Was gehört auf jeden Fall zu einer erfolgreichen
+                                Marketingstrategie?</p>
+                            <p class="mt-2">Zielgruppen verständnis und Unterhaltung. Es muss nicht unbedingt jemanden
+                                zum
+                                Lachen bringen, sondern einfach spannend wirken.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Worauf achtest du bei Werbung? Welche Fehler sollte
+                                man
+                                bei Werbung unbedingt vermeiden?</p>
+                            <p class="mt-2">Nicht zu verkäuferisch sein und nicht zu allgemein sind. Nach dem Motto:
+                                Wenn
+                                man alle anspricht, spricht man niemanden an.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Wie wichtig sind aktuelle Trends im Bezug auf
+                                Marketing?</p>
+                            <p class="mt-2">Aktuelle Trends sind extrem wichtig.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Wie wichtig ist es, ein Gesicht hinter einer Werbung
+                                zu
+                                haben?</p>
+                            <p class="mt-2">Das ist nicht notwendig, kann aber helfen Aufmerksamkeit zu bekommen. Leute
+                                sehen gerne Menschen, anstatt nur ein Produkt.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Kommst du selbst auf die Ideen oder lässt du dich
+                                inspirieren?</p>
+                            <p class="mt-2">Beides.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Was ist das Erste, was du bei Kunden von GoBrand
+                                anschaust?</p>
+                            <p class="mt-2">Als erstes wird eine Zielgruppen-Analyse gemacht.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Gibt es Werbemassnahmen, die du ausprobiert hast und
+                                nicht
+                                funktioniert haben? Falls ja, warum?</p>
+                            <p class="mt-2">Gewisse Creator funktionieren nicht, weil beispielsweise die Persönlichkeit
+                                von
+                                den Personen nicht gut in Werbungen ankommen.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Tipps für erfolgreiches Marketing? Was kann (fast)
+                                jedes
+                                Unternehmen esser machen?</p>
+                            <p class="mt-2">Jedes Unternehmen kann spannendere Werbung machen.</p>
+                        </div>
+                        <div class="block w-full gap-x-6 mt-4">
+                            <p class="font-semibold mt-8 text-lg">Welche Lektionen hast du aus deiner Teilnahme bei "Die
+                                Höhle der Löwen" gelernt?</p>
+                            <p class="mt-2">Das ein Investor Sicherheit und dein Commitment bei dem einzelnen Projekt
+                                braucht.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Mobile menu -->
-            <div class="hidden sm:hidden" id="mobile-menu">
-                <div class="space-y-1 pb-4 pt-2">
-                    <a href="index.html"
-                       class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
-                    <a href="examples.html"
-                       class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Gute
-                        Beispiele</a>
-                    <a href="quiz.html"
-                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
-                    <a href="research.html"
-                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium border-green-500 bg-green-50 text-green-700  hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
-                        & Recherche</a>
-                    <a href="about.html"
-                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
-                        uns</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="bg-white py-16 sm:py-24">
-            <div class="mx-auto px-6 lg:px-8">
-                <div class="mx-auto lg:mx-0">
-                    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Interview
-                        mit Robin Horner</h2>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Auf welche Arten betreibst du Marketing bei Kunden von
-                            GoBrand oder Freeways?</p>
-                        <p class="mt-2">Facebook, Instagram, TikTok, Google, Pinterest, YouTube und Taboola.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Welche davon lohnen sich am meisten?</p>
-                        <p class="mt-2">Alles, was profitabel ist, lohnt sich. Aber am meisten wird durch Meta (Facebook
-                            und Instagram) gemacht.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Was gehört auf jeden Fall zu einer erfolgreichen
-                            Marketingstrategie?</p>
-                        <p class="mt-2">Zielgruppen verständnis und Unterhaltung. Es muss nicht unbedingt jemanden zum
-                            Lachen bringen, sondern einfach spannend wirken.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Worauf achtest du bei Werbung? Welche Fehler sollte man
-                            bei Werbung unbedingt vermeiden?</p>
-                        <p class="mt-2">Nicht zu verkäuferisch sein und nicht zu allgemein sind. Nach dem Motto: Wenn
-                            man alle anspricht, spricht man niemanden an.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Wie wichtig sind aktuelle Trends im Bezug auf
-                            Marketing?</p>
-                        <p class="mt-2">Aktuelle Trends sind extrem wichtig.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Wie wichtig ist es, ein Gesicht hinter einer Werbung zu
-                            haben?</p>
-                        <p class="mt-2">Das ist nicht notwendig, kann aber helfen Aufmerksamkeit zu bekommen. Leute
-                            sehen gerne Menschen, anstatt nur ein Produkt.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Kommst du selbst auf die Ideen oder lässt du dich
-                            inspirieren?</p>
-                        <p class="mt-2">Beides.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Was ist das Erste, was du bei Kunden von GoBrand
-                            anschaust?</p>
-                        <p class="mt-2">Als erstes wird eine Zielgruppen-Analyse gemacht.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Gibt es Werbemassnahmen, die du ausprobiert hast und nicht
-                            funktioniert haben? Falls ja, warum?</p>
-                        <p class="mt-2">Gewisse Creator funktionieren nicht, weil beispielsweise die Persönlichkeit von
-                            den Personen nicht gut in Werbungen ankommen.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Tipps für erfolgreiches Marketing? Was kann (fast) jedes
-                            Unternehmen esser machen?</p>
-                        <p class="mt-2">Jedes Unternehmen kann spannendere Werbung machen.</p>
-                    </div>
-                    <div class="block w-full gap-x-6 mt-4">
-                        <p class="font-semibold mt-8 text-lg">Welche Lektionen hast du aus deiner Teilnahme bei "Die Höhle der Löwen" gelernt?</p>
-                        <p class="mt-2">Das ein Investor Sicherheit und dein Commitment bei dem einzelnen Projekt braucht.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</div>
-<script src="scripts/auth.js"></script>
-<script src="scripts/menu.js"></script>
-<script>
-    setSessionToken();
-</script>
+        </main>
+    </div>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script>
+        setSessionToken();
+    </script>
 </body>
+
 </html>
