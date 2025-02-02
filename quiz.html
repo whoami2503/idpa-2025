@@ -102,27 +102,30 @@
                               </div>
                             </form>
                             <div>
-                              <div class="mt-8" id="avg-ad-1">
-                                <h4>Die durchschnittliche Bewertung aller Nutzer ist:</h4>
+                              <div class="mt-8 hidden" id="avg-ad-1">
+
+                                <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
                                 <div class="flex items-center">
-                                  <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
-                                  <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                    <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
-                                  </svg>
-                                  <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                    <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
-                                  </svg>
-                                  <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                    <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
-                                  </svg>
-                                  <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                    <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
-                                  </svg>
-                                  <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                    <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
-                                  </svg>
+                                  <p class="text-2xl" id="avg"></p>
+                                  <div class="flex items-center ml-4">
+                                    <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </div>
                                 </div>
-                                <p class="sr-only">4 out of 5 stars</p>
                               </div>
 
                               </div>
@@ -167,6 +170,34 @@
                                 <button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
                               </div>
                             </form>
+                            <div>
+                              <div class="mt-8 hidden" id="avg-ad-2">
+
+                                <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                <div class="flex items-center">
+                                  <p class="text-2xl" id="avg"></p>
+                                  <div class="flex items-center ml-4">
+                                    <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+
+                              </div>
                           </div>
                           <div class="mt-24">
                             <div class="rounded-2xl">
@@ -207,6 +238,35 @@
                               <div class="mt-0">
                                 <button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
                               </div>
+                              </form>
+                              <div>
+                                <div class="mt-8 hidden" id="avg-ad-3">
+  
+                                  <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                  <div class="flex items-center">
+                                    <p class="text-2xl" id="avg"></p>
+                                    <div class="flex items-center ml-4">
+                                      <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+  
+                                </div>
                             </form>
                           </div>
                         </div>
@@ -217,11 +277,10 @@
         </main>
         </div>
         <script src="scripts/auth.js"></script>
-        <script src="scripts/menu.js"></script>$
-        <script type="module" src="scripts/quiz.js"></script>
+        <script src="scripts/menu.js"></script>
         <script>
-            setSessionToken();
-        </script>
-
+          setSessionToken();
+      </script>
+        <script type="module" src="scripts/quiz.js"></script>
     </body>
 </html>
