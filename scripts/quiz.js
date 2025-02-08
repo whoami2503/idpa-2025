@@ -57,7 +57,7 @@ document.querySelectorAll('form[id^="vid-"]').forEach(form => {
         console.error('Error submitting rating:', error);
         alert('Failed to submit rating.');
       } else {
-
+        form.classList.remove('md:flex');
         form.classList.add('hidden');
 
         await updateAverageRating(adId);
@@ -84,7 +84,6 @@ async function updateAverageRating(adId) {
     .select('rating')
     .eq('ad_id', adId);
 
-
   if (error) {
     console.error(`Error fetching ratings for ad ${adId}:`, error);
     return;
@@ -94,40 +93,11 @@ async function updateAverageRating(adId) {
     return;
   }
 
-  const totalRating = data.reduce((sum, entry) => sum + entry.rating, 0);
-  const averageRating = totalRating / data.length;
-
+  const totalRatings = data.length;
+  const totalRatingSum = data.reduce((sum, entry) => sum + entry.rating, 0);
+  const averageRating = totalRatingSum / totalRatings;
 
   avgContainer.classList.remove('hidden');
-
-  const stars = avgContainer.querySelectorAll('svg');
-  stars.forEach((star, index) => {
-    const starIndex = index + 1;
-    let fillPercentage = 0;
-
-    if (starIndex <= averageRating) {
-      fillPercentage = 100;  // full star
-    } else if (starIndex - 1 < averageRating) {
-      fillPercentage = (averageRating - (starIndex - 1)) * 100; // partial fill
-    }
-
-    star.innerHTML = `
-      <defs>
-        <linearGradient id="grvid-${adId}-${index}" gradientUnits="userSpaceOnUse" x1="0" x2="100%">
-          <stop offset="${fillPercentage}%" stop-color="#facc15"/>
-          <stop offset="${fillPercentage}%" stop-color="gray"/>
-        </linearGradient>
-      </defs>
-      <path fill="url(#grvid-${adId}-${index})"
-            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0
-               l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651
-               l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591
-               l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637
-               3.62-3.102c.635-.544.297-1.584-.536-1.65
-               l-4.752-.382-1.831-4.401z">
-      </path>
-    `;
-  });
 
   const avgText = avgContainer.querySelector('#avg');
   if (avgText) {
@@ -138,7 +108,84 @@ async function updateAverageRating(adId) {
   if (srText) {
     srText.textContent = `${averageRating.toFixed(1)} out of 5 stars`;
   }
+
+  // Generate rating distribution chart
+  renderRatingDistributionChart(adId, data);
 }
+
+
+// Store chart instances to prevent multiple overlays
+const chartInstances = {};
+
+/**
+ * Generates a bar chart showing the distribution of ratings (1-star, 2-star, ..., 5-star).
+ */
+function renderRatingDistributionChart(adId, ratingData) {
+  const chartContainerId = `rating-distribution-${adId}`;
+
+  // Check if a canvas already exists, otherwise create one
+  let chartContainer = document.getElementById(chartContainerId);
+  if (!chartContainer) {
+    chartContainer = document.createElement('canvas');
+    chartContainer.id = chartContainerId;
+    chartContainer.style.marginTop = "20px";
+    chartContainer.style.maxWidth = "400px";  // Fix: Set max width
+    chartContainer.style.maxHeight = "300px"; // Fix: Set max height
+    document.getElementById(`avg-vid-${adId}`).appendChild(chartContainer);
+  } else {
+    // Destroy the previous chart instance if it exists
+    if (chartInstances[adId]) {
+      chartInstances[adId].destroy();
+    }
+  }
+
+  // Count occurrences of each rating (1-5)
+  const ratingCounts = [0, 0, 0, 0, 0]; // Index 0 = 1-star, Index 4 = 5-star
+
+  ratingData.forEach(entry => {
+    if (entry.rating >= 1 && entry.rating <= 5) {
+      ratingCounts[entry.rating - 1] += 1;
+    }
+  });
+
+  // Create the Chart.js bar chart
+  const newChart = new Chart(chartContainer, {
+    type: 'bar',
+    data: {
+      labels: ['1 Stern', '2 Sterne', '3 Sterne', '4 Sterne', '5 Sterne'],
+      datasets: [
+        {
+          label: 'Anzahl Bewertungen',
+          data: ratingCounts,
+          backgroundColor: ['#FF3D00', '#FF9100', '#FFC107', '#4CAF50', '#1B5E20'],
+          borderColor: ['#B71C1C', '#E65100', '#FFA000', '#388E3C', '#0D5302'],
+          borderWidth: 1,
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 1,
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+    },
+  });
+
+  // Save the new chart instance
+  chartInstances[adId] = newChart;
+}
+
 
 /**
  * Check if the user with this tempSessionID has already voted on each ad.
@@ -170,6 +217,7 @@ async function checkUserVotes() {
 
     if (data && data.length > 0) {
       form.classList.add('hidden');
+      form.classList.remove('md:flex');
       await updateAverageRating(adId);
     }
   }
