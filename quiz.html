@@ -9,6 +9,22 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+      <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white opacity-100 p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+            <div class="flex justify-center mb-4">
+                <svg class="h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M247.2 17c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9l-14.6-82.8c-3.9-22.1-14.6-42.3-30.7-57.9L388.9 57.5c-16.1-15.6-36.6-25.6-58.7-28.7L247.2 17zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900">Cookies</h3>
+            <p class="text-sm text-gray-500 mt-2">
+                Diese Seite verwendet YouTube-Videos, die Cookies setzen können. Bitte akzeptieren Sie, um die Inhalte zu sehen.
+            </p>
+            <button onclick="setCookieAccept()" class="mt-4 w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 rounded-md">
+                Akzeptieren
+            </button>
+        </div>
+    </div>
         <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
         <header>
             <nav class="bg-white">
@@ -62,10 +78,10 @@
                         <p class="mt-6 text-lg text-gray-600">Du hast auf der Reise über diese Seite viel über das Thema virales Marketing gelernt. Zeit dein Wissen auf die Probe zu stellen! Auf dieser Seite sind diverse Werbespots aufgelistet. Einige davon sind besser, andere weniger gut. Deine Aufgabe ist es nun jeden dieser Spots anzuschauen und deine Bewertung abzugeben. Nach Bestätigen deiner Einschätzung des Werbespots siehst du einerseits die durchschnittliche Bewertung aller Benutzer und du siehst unsere Bewertung als Experten. Auf die Plätze, fertig, los!</p>
                     </div>
                     <div class="bg-white">
-                        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                        <div class="$">
                           <div>
                             <div class="rounded-2xl">
-                                <iframe height="315" src="https://www.youtube.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe height="315" src="https://www.youtube-nocookie.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <form action="#" method="GET" id="vid-1" class="mt-8 block md:flex justify-between items-center">
 
@@ -171,6 +187,8 @@
             </div>
         </main>
         </div>
+        <script src="scripts/cookies.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="scripts/auth.js"></script>
         <script src="scripts/menu.js"></script>
