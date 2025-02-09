@@ -171,15 +171,22 @@ function renderRatingDistributionChart(adId, ratingData) {
       chartInstances[adId].destroy();
     }
   }
-
+  var totalRatings = 0;
   // Count occurrences of each rating (1-5)
   const ratingCounts = [0, 0, 0, 0, 0]; // Index 0 = 1-star, Index 4 = 5-star
-
   ratingData.forEach(entry => {
+    totalRatings += 1;
+
     if (entry.rating >= 1 && entry.rating <= 5) {
       ratingCounts[entry.rating - 1] += 1;
     }
   });
+
+  let totalRatingsContainer = document.getElementById(`ad-${adId}-rating-count`)
+  if(totalRatingsContainer){
+    totalRatingsContainer.innerHTML = totalRatings;
+
+  }
 
   // Create the Chart.js bar chart
   const newChart = new Chart(chartContainer, {
