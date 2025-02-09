@@ -101,7 +101,7 @@ async function updateAverageRating(adId) {
 
 
 
-  const stars = avgContainer.querySelectorAll('svg');
+  const stars = avgContainer.querySelectorAll('svg.dynamic');
   stars.forEach((star, index) => {
     const starIndex = index + 1;
     let fillPercentage = 0;
@@ -115,7 +115,7 @@ async function updateAverageRating(adId) {
     star.innerHTML = `
       <defs>
         <linearGradient id="grvid-${adId}-${index}" gradientUnits="userSpaceOnUse" x1="0" x2="100%">
-          <stop offset="${fillPercentage}%" stop-color="#facc15"/>
+          <stop offset="${fillPercentage}%" stop-color="#ecc94b"/>
           <stop offset="${fillPercentage}%" stop-color="gray"/>
         </linearGradient>
       </defs>
