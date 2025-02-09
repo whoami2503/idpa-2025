@@ -1,130 +1,242 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Virales Marketing in der Schweiz</title>
-        <link rel="stylesheet" href="/styles/styles.css">
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-        <header>
-            <nav class="bg-white">
-                <div class="mx-auto   px-2 md:px-6 lg:px-8">
-                    <div class="relative flex h-16 justify-between">
-                        <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
-                            <!-- Mobile menu button -->
-                            <button type="button" id="menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-                            <div class="flex shrink-0 items-center">
-                                <div class="h-8 w-8 rounded-full bg-green-500"></div>
-                            </div>
-                            <div class="hidden md:ml-16 md:flex md:space-x-16">
-                                <a href="index.html" class="inline-flex items-center border-b-2 text-green-500 border-green-500  px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
-                                <a href="examples.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Beispiele</a>
-                                <a href="quiz.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
-                                <a href="research.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview & Recherche</a>
-                                <a href="about.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über uns</a>
-                                <a href="sources.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quellen</a>
-                            </div>
-                        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virales Marketing in der Schweiz</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+    <header>
+        <nav class="bg-white">
+            <div class="mx-auto   px-2 md:px-6 lg:px-8">
+                <div class="relative flex h-16 justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <!-- Mobile menu button -->
+                        <button type="button" id="menu-button"
+                                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                                aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                            </svg>
+                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" aria-hidden="true" id="menu-close-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
                     </div>
-                </div>
-                <!-- Mobile menu -->
-                <div class="hidden md:hidden" id="mobile-menu">
-                    <div class="space-y-1 pb-4 pt-2">
-                        <a href="index.html" class="block border-l-4 border-green-500 text-green-500 text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
-                        <a href="examples.html" class="block border-l-4 border-transparent  py-2 pl-3 pr-4 text-base font-medium text-gray-500">Beispiele</a>
-                        <a href="quiz.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
-                        <a href="research.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview & Recherche</a>
-                        <a href="about.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über uns</a>
-                        <a href="sources.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quellen</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="bg-white py-16 sm:py-24">
-                <div class="mx-auto px-6 lg:px-8">
-                    <div class="mb-8">
-                        <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                            Warum bleiben Werbungen im Gedächtnis?
-                        </h2>
-                        <p class="mt-6 text-lg text-gray-600">
-                            Werbung begegnet uns täglich, aber nur wenige Kampagnen bleiben uns wirklich im Gedächtnis. Warum? Erfolgreiche Werbungen sollen gezielt Emotionen auslösen, kreative Überraschungseffekte, wie etwa eine unerwartete Wendung oder ein humorvoller Wechsel der Perspektive, nutzen und interessante Geschichten erzählen, welche das Ziel-Publikum positiv ansprechen sollen. Hier findest du die entsprechenden Prinzipien, die dabei helfen, gute und vor allem auch einprägsame Werbung zu erstellen. 
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-8">
-                        <div>
-                            <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Emotionen wecken</h3>
-                            <p class="text-lg text-gray-600">
-                                Ob Freude, Mitgefühl oder Überraschung – Werbungen bleiben in Erinnerung, wenn sie uns emotional berühren. Unser Gehirn speichert Inhalte besonders gut, wenn sie mit intensiven Gefühlen verknüpft sind. Deshalb setzen erfolgreiche Kampagnen gezielt auf starke Stimmungswechsel, um die Aufmerksamkeit des Publikums nicht nur zu halten, sondern sogar zu steigern. Alternativ greifen sie alltägliche Situationen auf, in denen sich nahezu jeder wiedererkennt.                            </p>
+                    <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+                        <div class="flex shrink-0 items-center">
+                            <div class="h-8 w-8 rounded-full bg-green-500"></div>
                         </div>
-                        <div>
-                            <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Storytelling als Bindung</h3>
-                            <p class="text-lg text-gray-600">
-                                Eine gute Werbung erzählt meist eine Geschichte. Charaktere, visuelle Elemente oder erzählerische Stilmittel, die gezielt auf das Zielpublikum abgestimmt sind und in weiteren Werbungen wiederkehren, schaffen eine starke Verbindung zum Publikum. Menschen erinnern sich deutlich besser an wiederkehrende Elemente und verknüpfen sie idealerweise mit der Marke oder ihrer Botschaft. Deshalb sind solche Werbungen oft erfolgreicher als reine Produktpräsentationen. Entscheidend ist jedoch, dass das Wiedererkennungsmerkmal zu den Werten des Unternehmens und der Zielgruppe passt.                            </p>
+                        <div class="hidden md:ml-16 md:flex md:space-x-16">
+                            <a href="index.html"
+                               class="inline-flex items-center border-b-2 text-green-500 border-green-500  px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
+                            <a href="examples.html"
+                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Beispiele</a>
+                            <a href="quiz.html"
+                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
+                            <a href="research.html"
+                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
+                                & Recherche</a>
+                            <a href="about.html"
+                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
+                                uns</a>
+                            <a href="sources.html"
+                               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quellen</a>
                         </div>
-                        <div>
-                            <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Überraschungen für maximale Aufmerksamkeit</h3>
-                            <p class="text-lg text-gray-600">
-                                Überraschungsmomente tragen dazu bei, dass Werbungen im Gedächtnis bleiben und nicht übersehen werden. Ein unerwarteter Twist oder ein raffinierter Perspektivenwechsel kann sogar dazu führen, dass eine Werbung viral geht. Entscheidend ist jedoch, dass die Überraschung nicht unrealistisch wirkt, sondern sinnvoll in die Botschaft der Werbung eingebettet ist.                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Einfache Botschaft ist der Schlüssel</h3>
-                            <p class="text-lg text-gray-600">
-                                Die Botschaft einer Werbung sollte grundsätzlich klar und einfach sein. Zu komplexe Inhalte führen oft zu Verwirrung und bleiben kaum im Gedächtnis. Prägnant formulierte Botschaften, verständliche Bilder und eine eindeutige <a href="https://de.wikipedia.org/wiki/Call_to_Action_(Marketing)" target="_blank" class="underline">Call-to-Action</a> erhöhen die Wahrscheinlichkeit, die gewünschte Reaktion beim Publikum auszulösen.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Interaktion für den Erfolg</h3>
-                            <p class="text-lg text-gray-600">
-                                Ein entscheidender Faktor für den Erfolg von Social-Media-Werbung ist ihre Teilbarkeit. Kampagnen, die zur aktiven Teilnahme anregen – sei es durch Challenges, Diskussionen oder unerwartete Aktionen wie Straßeninterviews – erzielen oft eine höhere Reichweite. Denn je mehr Menschen mit einer Werbung interagieren, desto größer ist ihre Wirkung.                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">TikTok und Meta</h3>
-                            <p class="text-lg text-gray-600">
-                                TikTok und Meta bieten unterschiedliche Werbemöglichkeiten. Mit TikTok lässt sich schnell eine große Reichweite erzielen – wie es bei einer der ersten Werbekampagnen von Robin Horner deutlich wurde. Seine dort viral gegangene Kampagne erreichte rasch über eine Million Impressionen. Diese sogenannte "Reichweitenbombe" eignet sich ideal, um eine Marke bekannt zu machen. Doch hohe Reichweite allein führt nicht automatisch zu Verkäufen. Deshalb setzt Horner zusätzlich auf Meta, das gezieltere Werbung ermöglicht, indem Nutzer anhand ihres Kaufverhaltens und ihrer Interessen gefiltert werden.
-
-                                Zusammengefasst: TikTok hilft, Bekanntheit aufzubauen, während Meta für langfristige, stabile Umsätze sorgt. Eine erfolgreiche Kampagne sollte daher beide Plattformen strategisch kombinieren.
-                            </p>
-                        </div>
-                    <div>
-                        <h3 class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">Tipps & Tricks zusammengefasst</h3>
-                        <ul class="mt-2 list-inside text-lg text-gray-600">
-                            <li><strong>Emotionale Bindung:</strong> Werbung bleibt im Gedächtnis, wenn sie starke Emotionen auslöst.</li>
-                            <li><strong>Wiedererkennbarkeit:</strong> Wiederkehrende Figuren oder Geschichten bilden einen Bezug zur Marke.</li>
-                            <li><strong>Zielgruppenanalyse:</strong> Eine gründliche Analyse der Zielgruppe ist essenziell. Laut Robin Horner ist es der erste Schritt des Marketings.</li>
-                            <li><strong>Überraschungsmomente:</strong> Überraschungen müssen glaubwürdig und sinnvoll in die Story integriert sein.</li>
-                            <li><strong>Klarheit der Botschaft:</strong> Zu komplexe Inhalte verwirren - einfache und direkte Aussagen sind effektiver.</li>
-                            <li><strong>Interaktion & Challenges:</strong> Werbung, die zu einer aktiven Teilnahme anregt, erzielt eine höhere Reichweite.</li>
-                            <li><strong>Nutzen von Humor:</strong> Laut der Mobiliar sind humorvolle Geschichten erfolgreicher als reine Werbungen.</li>
-                            <li><strong>Zielgruppe ansprechen:</strong> Robin betont: "Wenn man alle anspricht, spricht man niemanden an."</li>
-                            <li><strong>Wiedererkennungswert:</strong> Wiederkehrende Elemente wie Logos, Slogans oder Designs können allen helfen.</li>
-                            <li><strong>Design optimierung:</strong> Gut gewählte Farben und Schriftarten sind wichtig für eine professionelle Wirkung.</li>
-                            <li><strong>Testen der Kampagne:</strong> Unternehmen wie die Mobiliar setzen auf Marktforschung und Pretests zur Optimierung.</li>
-                        </ul>
-                    </div>
                     </div>
                 </div>
             </div>
-        </main>
+            <!-- Mobile menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="space-y-1 pb-4 pt-2">
+                    <a href="index.html"
+                       class="block border-l-4 border-green-500 text-green-500 text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
+                    <a href="examples.html"
+                       class="block border-l-4 border-transparent  py-2 pl-3 pr-4 text-base font-medium text-gray-500">Beispiele</a>
+                    <a href="quiz.html"
+                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
+                    <a href="research.html"
+                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
+                        & Recherche</a>
+                    <a href="about.html"
+                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
+                        uns</a>
+                    <a href="sources.html"
+                       class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quellen</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="bg-white py-16 sm:py-24">
+            <div class="mx-auto px-6 lg:px-8">
+                <div class="mb-8">
+                    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                        Warum bleiben Werbungen im Gedächtnis?
+                    </h2>
+                    <p class="mt-6 text-lg text-gray-600">
+                        Werbung begegnet uns täglich, aber nur wenige Kampagnen bleiben uns wirklich im Gedächtnis.
+                        Warum? Erfolgreiche Werbungen sollen gezielt Emotionen auslösen, kreative Überraschungseffekte,
+                        wie etwa eine unerwartete Wendung oder ein humorvoller Wechsel der Perspektive, nutzen und
+                        interessante Geschichten erzählen, welche das Ziel-Publikum positiv ansprechen sollen. Hier
+                        findest du die entsprechenden Prinzipien, die dabei helfen, gute und vor allem auch einprägsame
+                        Werbung zu erstellen.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-8">
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                            Fragestellung</h3>
+                        <p class="text-2xl text-gray-600 italic">
+                            "Wie betreiben Schweizer Unternehmen virales Marketing für ein Produkt?"</p>
+                        <p class="text-lg text-gray-600 mt-6">Die Fragestellung bezieht sich auf schweizer Unternehmen,
+                            da wir in der Schweiz einige gute Beispiele für Marketing in den sozialen Medien haben. Um
+                            an Informationen zu gelangen,
+                            die uns dabei helfen, die Fragestellung zu beantworten, haben wir Interviews mit der
+                            Versicherungsgesellschaft "die Mobiliar" und dem Jungunternehmer Robin Horner
+                            durchgeführt.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                            Themenwahl/Motivation</h3>
+                        <p class="text-lg text-gray-600 mt-6">
+                            Die Mitglieder unserer Gruppe sind alle täglich vom Marketing von Produkten betroffen. Als
+                            Informatiker müssen wir neben interner Software auch Kundenprodukte machen, die ebenfalls
+                            verschiedene Businessaspekte erfüllen müssen, um die Kunden direkt anzusprechen. Ilian
+                            Häsler war zum Beispiel Teil des Teams, dass die Webseite für das «Connected»-Tech-Event des
+                            Militärs 2023 gemacht hat, welche neben Informationen auch Kunden anwerben sollte. Die
+                            Chance, dass wir als Informatiker in unserer Zukunft in den Bereich Werbung bzw. Webseiten
+                            für Unternehmen gehen ist gross, daher ist es in unser aller Interesse, so viel wie möglich
+                            darüber herauszufinden.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                            Emotionen wecken</h3>
+                        <p class="text-lg text-gray-600">
+                            Ob Freude, Mitgefühl oder Überraschung – Werbungen bleiben in Erinnerung, wenn sie uns
+                            emotional berühren. Unser Gehirn speichert Inhalte besonders gut, wenn sie mit intensiven
+                            Gefühlen verknüpft sind. Deshalb setzen erfolgreiche Kampagnen gezielt auf starke
+                            Stimmungswechsel, um die Aufmerksamkeit des Publikums nicht nur zu halten, sondern sogar zu
+                            steigern. Alternativ greifen sie alltägliche Situationen auf, in denen sich nahezu jeder
+                            wiedererkennt. </p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                            Storytelling als Bindung</h3>
+                        <p class="text-lg text-gray-600">
+                            Eine gute Werbung erzählt meist eine Geschichte. Charaktere, visuelle Elemente oder
+                            erzählerische Stilmittel, die gezielt auf das Zielpublikum abgestimmt sind und in weiteren
+                            Werbungen wiederkehren, schaffen eine starke Verbindung zum Publikum. Menschen erinnern sich
+                            deutlich besser an wiederkehrende Elemente und verknüpfen sie idealerweise mit der Marke
+                            oder ihrer Botschaft. Deshalb sind solche Werbungen oft erfolgreicher als reine
+                            Produktpräsentationen. Entscheidend ist jedoch, dass das Wiedererkennungsmerkmal zu den
+                            Werten des Unternehmens und der Zielgruppe passt. </p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                            Überraschungen für maximale Aufmerksamkeit</h3>
+                        <p class="text-lg text-gray-600">
+                            Überraschungsmomente tragen dazu bei, dass Werbungen im Gedächtnis bleiben und nicht
+                            übersehen werden. Ein unerwarteter Twist oder ein raffinierter Perspektivenwechsel kann
+                            sogar dazu führen, dass eine Werbung viral geht. Entscheidend ist jedoch, dass die
+                            Überraschung nicht unrealistisch wirkt, sondern sinnvoll in die Botschaft der Werbung
+                            eingebettet ist. </p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Einfache
+                            Botschaft ist der Schlüssel</h3>
+                        <p class="text-lg text-gray-600">
+                            Die Botschaft einer Werbung sollte grundsätzlich klar und einfach sein. Zu komplexe Inhalte
+                            führen oft zu Verwirrung und bleiben kaum im Gedächtnis. Prägnant formulierte Botschaften,
+                            verständliche Bilder und eine eindeutige <a
+                                href="https://de.wikipedia.org/wiki/Call_to_Action_(Marketing)" target="_blank"
+                                class="underline">Call-to-Action</a> erhöhen die Wahrscheinlichkeit, die gewünschte
+                            Reaktion beim Publikum auszulösen.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                            Interaktion für den Erfolg</h3>
+                        <p class="text-lg text-gray-600">
+                            Ein entscheidender Faktor für den Erfolg von Social-Media-Werbung ist ihre Teilbarkeit.
+                            Kampagnen, die zur aktiven Teilnahme anregen – sei es durch Challenges, Diskussionen oder
+                            unerwartete Aktionen wie Straßeninterviews – erzielen oft eine höhere Reichweite. Denn je
+                            mehr Menschen mit einer Werbung interagieren, desto größer ist ihre Wirkung. </p>
+                    </div>
+                    <div>
+                        <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">TikTok
+                            und Meta</h3>
+                        <p class="text-lg text-gray-600">
+                            TikTok und Meta bieten unterschiedliche Werbemöglichkeiten. Mit TikTok lässt sich schnell
+                            eine große Reichweite erzielen – wie es bei einer der ersten Werbekampagnen von Robin Horner
+                            deutlich wurde. Seine dort viral gegangene Kampagne erreichte rasch über eine Million
+                            Impressionen. Diese sogenannte "Reichweitenbombe" eignet sich ideal, um eine Marke bekannt
+                            zu machen. Doch hohe Reichweite allein führt nicht automatisch zu Verkäufen. Deshalb setzt
+                            Horner zusätzlich auf Meta, das gezieltere Werbung ermöglicht, indem Nutzer anhand ihres
+                            Kaufverhaltens und ihrer Interessen gefiltert werden.
+
+                            Zusammengefasst: TikTok hilft, Bekanntheit aufzubauen, während Meta für langfristige,
+                            stabile Umsätze sorgt. Eine erfolgreiche Kampagne sollte daher beide Plattformen strategisch
+                            kombinieren.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">Tipps & Tricks
+                            zusammengefasst</h3>
+                        <ul class="mt-2 list-inside text-lg text-gray-600">
+                            <li><strong>Emotionale Bindung:</strong> Werbung bleibt im Gedächtnis, wenn sie starke
+                                Emotionen auslöst.
+                            </li>
+                            <li><strong>Wiedererkennbarkeit:</strong> Wiederkehrende Figuren oder Geschichten bilden
+                                einen Bezug zur Marke.
+                            </li>
+                            <li><strong>Zielgruppenanalyse:</strong> Eine gründliche Analyse der Zielgruppe ist
+                                essenziell. Laut Robin Horner ist es der erste Schritt des Marketings.
+                            </li>
+                            <li><strong>Überraschungsmomente:</strong> Überraschungen müssen glaubwürdig und sinnvoll in
+                                die Story integriert sein.
+                            </li>
+                            <li><strong>Klarheit der Botschaft:</strong> Zu komplexe Inhalte verwirren - einfache und
+                                direkte Aussagen sind effektiver.
+                            </li>
+                            <li><strong>Interaktion & Challenges:</strong> Werbung, die zu einer aktiven Teilnahme
+                                anregt, erzielt eine höhere Reichweite.
+                            </li>
+                            <li><strong>Nutzen von Humor:</strong> Laut der Mobiliar sind humorvolle Geschichten
+                                erfolgreicher als reine Werbungen.
+                            </li>
+                            <li><strong>Zielgruppe ansprechen:</strong> Robin betont: "Wenn man alle anspricht, spricht
+                                man niemanden an."
+                            </li>
+                            <li><strong>Wiedererkennungswert:</strong> Wiederkehrende Elemente wie Logos, Slogans oder
+                                Designs können allen helfen.
+                            </li>
+                            <li><strong>Design optimierung:</strong> Gut gewählte Farben und Schriftarten sind wichtig
+                                für eine professionelle Wirkung.
+                            </li>
+                            <li><strong>Testen der Kampagne:</strong> Unternehmen wie die Mobiliar setzen auf
+                                Marktforschung und Pretests zur Optimierung.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="scripts/auth.js"></script>
-        <script src="scripts/menu.js"></script>
-        <script>
-            setSessionToken();
-        </script>
-    </body>
+    </main>
+</div>
+<script src="scripts/auth.js"></script>
+<script src="scripts/menu.js"></script>
+<script>
+    setSessionToken();
+</script>
+</body>
 </html>
