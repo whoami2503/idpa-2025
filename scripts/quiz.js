@@ -129,6 +129,7 @@ function renderRatingDistributionChart(adId, ratingData) {
     chartContainer = document.createElement('canvas');
     chartContainer.id = chartContainerId;
     chartContainer.style.marginTop = "20px";
+    chartContainer.style.marginLeft = "16px";
     chartContainer.style.maxWidth = "400px";  // Fix: Set max width
     chartContainer.style.maxHeight = "300px"; // Fix: Set max height
     document.getElementById(`avg-vid-${adId}`).appendChild(chartContainer);
