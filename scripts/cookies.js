@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if user has already accepted cookies
     if (localStorage.getItem("cookieAccept") === "true") {
+        cookieModal.classList.remove("fixed");
         cookieModal.classList.add("hidden");
     } else {
+        cookieModal.classList.add("fixed");
         cookieModal.classList.remove("hidden");
     }
 });
