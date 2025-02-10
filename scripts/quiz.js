@@ -99,6 +99,38 @@ async function updateAverageRating(adId) {
 
   avgContainer.classList.remove('hidden');
 
+
+
+  const stars = avgContainer.querySelectorAll('svg.dynamic');
+  stars.forEach((star, index) => {
+    const starIndex = index + 1;
+    let fillPercentage = 0;
+
+    if (starIndex <= averageRating) {
+      fillPercentage = 100;  // full star
+    } else if (starIndex - 1 < averageRating) {
+      fillPercentage = (averageRating - (starIndex - 1)) * 100; // partial fill
+    }
+
+    star.innerHTML = `
+      <defs>
+        <linearGradient id="grvid-${adId}-${index}" gradientUnits="userSpaceOnUse" x1="0" x2="100%">
+          <stop offset="${fillPercentage}%" stop-color="#ecc94b"/>
+          <stop offset="${fillPercentage}%" stop-color="gray"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#grvid-${adId}-${index})"
+            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0
+               l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651
+               l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591
+               l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637
+               3.62-3.102c.635-.544.297-1.584-.536-1.65
+               l-4.752-.382-1.831-4.401z">
+      </path>
+    `;
+  });
+
+
   const avgText = avgContainer.querySelector('#avg');
   if (avgText) {
     avgText.textContent = `${averageRating.toFixed(1)}`;
@@ -129,6 +161,7 @@ function renderRatingDistributionChart(adId, ratingData) {
     chartContainer = document.createElement('canvas');
     chartContainer.id = chartContainerId;
     chartContainer.style.marginTop = "20px";
+    chartContainer.style.marginLeft = "16px";
     chartContainer.style.maxWidth = "400px";  // Fix: Set max width
     chartContainer.style.maxHeight = "300px"; // Fix: Set max height
     document.getElementById(`avg-vid-${adId}`).appendChild(chartContainer);
@@ -138,15 +171,22 @@ function renderRatingDistributionChart(adId, ratingData) {
       chartInstances[adId].destroy();
     }
   }
-
+  var totalRatings = 0;
   // Count occurrences of each rating (1-5)
   const ratingCounts = [0, 0, 0, 0, 0]; // Index 0 = 1-star, Index 4 = 5-star
-
   ratingData.forEach(entry => {
+    totalRatings += 1;
+
     if (entry.rating >= 1 && entry.rating <= 5) {
       ratingCounts[entry.rating - 1] += 1;
     }
   });
+
+  let totalRatingsContainer = document.getElementById(`ad-${adId}-rating-count`)
+  if(totalRatingsContainer){
+    totalRatingsContainer.innerHTML = totalRatings;
+
+  }
 
   // Create the Chart.js bar chart
   const newChart = new Chart(chartContainer, {

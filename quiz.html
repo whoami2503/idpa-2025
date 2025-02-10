@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-      <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center z-50">
+      <div id="cookie-modal" class="hidden inset-0 flex items-center justify-center z-50">
         <div class="bg-white border border-black opacity-100 p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
             <div class="flex justify-center mb-4">
                 <svg class="h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -27,48 +27,48 @@
     </div>
         <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
         <header>
-            <nav class="bg-white">
-                <div class="mx-auto   px-2 sm:px-6 lg:px-8">
-                    <div class="relative flex h-16 justify-between">
-                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                            <!-- Mobile menu button -->
-                            <button type="button" id="menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
+          <nav class="bg-white">
+            <div class="mx-auto px-2 md:px-6 lg:px-8">
+                <div class="relative flex h-16 justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <!-- Mobile menu button -->
+                        <button type="button" id="menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+                        <div class="flex shrink-0 items-center">
+                            <div class="h-8 w-8 rounded-full bg-green-500"></div>
                         </div>
-                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                            <div class="flex shrink-0 items-center">
-                                <div class="h-8 w-8 rounded-full bg-green-500"></div>
-                            </div>
-                            <div class="hidden sm:ml-16 sm:flex sm:space-x-16">
-                                <a href="index.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
-                                <a href="examples.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Beispiele</a>
-                                <a href="quiz.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-green-500 border-green-500 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
-                                <a href="research.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview & Recherche</a>
-                                <a href="about.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über uns</a>
-                                <a href="sources.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quellen</a>
-                            </div>
+                        <div class="hidden md:ml-16 md:flex md:space-x-16">
+                            <a href="index.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
+                            <a href="examples.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Beispiele</a>
+                            <a href="quiz.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-green-500 border-green-500 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
+                            <a href="research.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview & Recherche</a>
+                            <a href="about.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über uns</a>
+                            <a href="sources.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quellen</a>
                         </div>
                     </div>
                 </div>
-                <!-- Mobile menu -->
-                <div class="hidden sm:hidden" id="mobile-menu">
-                    <div class="space-y-1 pb-4 pt-2">
-                        <a href="index.html" class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
-                        <a href="examples.html" class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Beispiele</a>
-                        <a href="quiz.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium border-green-500 bg-green-50 text-green-700 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
-                        <a href="research.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview & Recherche</a>
-                        <a href="about.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über uns</a>
-                        <a href="sources.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quellen</a>
-                    </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="space-y-1 pb-4 pt-2">
+                    <a href="index.html" class="block border-l-4 border-transparent text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
+                    <a href="examples.html" class="block border-l-4 border-transparent text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Beispiele</a>
+                    <a href="quiz.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium border-green-500 bg-green-50 text-green-700 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
+                    <a href="research.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview & Recherche</a>
+                    <a href="about.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über uns</a>
+                    <a href="sources.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quellen</a>
                 </div>
-            </nav>
+            </div>
+        </nav>
         </header>
         <main>
             <div class="bg-white py-16 sm:py-24">
@@ -78,12 +78,377 @@
                         <p class="mt-6 text-lg text-gray-600">Du hast auf der Reise über diese Seite viel über das Thema virales Marketing gelernt. Zeit dein Wissen auf die Probe zu stellen! Auf dieser Seite sind diverse Werbespots aufgelistet. Einige davon sind besser, andere weniger gut. Deine Aufgabe ist es nun jeden dieser Spots anzuschauen und deine Bewertung abzugeben. Nach Bestätigen deiner Einschätzung des Werbespots siehst du einerseits die durchschnittliche Bewertung aller Benutzer und du siehst unsere Bewertung als Experten. Auf die Plätze, fertig, los!</p>
                     </div>
                     <div class="bg-white">
-                        <div class="$">
+                        <div>
                           <div>
                             <div class="rounded-2xl">
-                                <iframe height="315" src="https://www.youtube-nocookie.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk" title="Mobiliar Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe height="400" src="https://www.youtube.com/embed/SdvEIZfGQ1Y?si=9DhrhGytrvpUCMan" title="Digitec Galaxus Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <form action="#" method="GET" id="vid-1" class="mt-8 block md:flex justify-between items-center">
+                            <div class="rounded-xl border-2 border-green-500 mt-6 p-2">
+                              <form action="#" method="GET" id="vid-1" class="my-8 block md:flex justify-between items-center">
+
+                                <div>
+                                  <div class="flex items-center space-x-2">
+                                    <!-- Star buttons -->
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="mt-0">
+                                  <button type="submit" class="w-3/4 md:w-full lg:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                </div>
+                                </form>
+                                <div>
+                                  <div class="hidden" id="avg-vid-1">
+                                    <div class="rounded-xl p-4">
+                                      <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                      <div class="flex items-center">
+                                        <p class="text-2xl" id="avg"></p>
+                                        <div class="flex items-center ml-4">
+                                          <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+                                    <div>
+                                      <div class="rounded-xl p-4">
+                                        <div class="hidden" id="ad-1-vid-rating">4.5</div>
+                                        <h4 class="text-lg">Die Bewertung von uns ist:</h4>
+                                        <div class="flex items-center">
+                                          <p class="text-2xl">4.5</p>
+                                          <div class="flex items-center ml-4">
+                                            <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8" viewBox="0 0 20 20" aria-hidden="true">
+                                              <defs>
+                                                <linearGradient id="halfGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                  <!-- Linke Hälfte: Gelb -->
+                                                  <stop offset="0%" stop-color="#ecc94b" />
+                                                  <stop offset="50%" stop-color="#ecc94b" />
+                                                  <!-- Rechte Hälfte: Grau -->
+                                                  <stop offset="50%" stop-color="#808080" />
+                                                  <stop offset="100%" stop-color="#808080" />
+                                                </linearGradient>
+                                              </defs>
+                                              <path fill="url(#halfGradient)" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div class="mt-4">
+                                          <p class="text-lg text-justify">
+                                            Die Galaxus-Werbung besticht durch eine humorvolle Pointe, die den Zuschauer unterhält – vor allem, weil sie zu Beginn eine echte Spannung aufbaut. Gleichzeitig wird der Zuschauer in die Irre geführt, sodass man zunächst an eine ganz andere Werbung denkt, als es letztlich der Fall ist. Ein halber Punkt Abzug gibt es zwar, da nicht klar erkennbar ist, für welches Produkt genau geworben wird – was jedoch nur Kritik auf hohem Niveau darstellt, da Galaxus ohnehin für mehr als nur einzelne Produkte stehen sollte. Zudem besitzt die Werbung einen hohen Wiedererkennungswert, da ihr Spannungsaufbau hin zu der humorvollen Auflösung ein typisches Markenzeichen der Galaxus-Kampagnen ist.                                          </p>                                      
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                    <div class="p-4">
+                                      <h4 class="text-lg">Folgende Grafik zeigt die Verteilung aller Bewertungen:</h4>
+                                      <h5 class="text-base font-semibold flex mt-4">Total Benutzerstimme(n): <p id="ad-1-rating-count" class="text-green-500 ml-2 mr-2"></p> </h5>
+
+                                    </div>
+                                  </div>
+    
+                                  </div>
+                            </div>
+
+                            </form>
+                          </div>
+                        </div>
+                        <div class="mt-32">
+                          <div>
+                            <div class="rounded-2xl">
+                                <iframe height="400" src="https://www.youtube.com/embed/jTvPA12JRug?si=CEqZ0sn9Mi54C-p9" title="Digitec Galaxus Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="rounded-xl border-2 border-green-500 mt-6 p-2">
+                              <form action="#" method="GET" id="vid-2" class="my-8 block md:flex justify-between items-center">
+
+                                <div>
+                                  <div class="flex items-center space-x-2">
+                                    <!-- Star buttons -->
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="mt-0">
+                                  <button type="submit" class="w-3/4 md:w-full lg:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                </div>
+                                </form>
+                                <div>
+                                  <div class="hidden" id="avg-vid-2">
+                                    <div class="rounded-xl p-4">
+                                      <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                      <div class="flex items-center">
+                                        <p class="text-2xl" id="avg"></p>
+                                        <div class="flex items-center ml-4">
+                                          <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+  
+                                    <div>
+                                      <div class="rounded-xl p-4">
+                                        <div class="hidden" id="ad-2-vid-rating">4.5</div>
+                                        <h4 class="text-lg">Die Bewertung von uns ist:</h4>
+                                        <div class="flex items-center">
+                                          <p class="text-2xl">4.5</p>
+                                          <div class="flex items-center ml-4">
+                                            <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8" viewBox="0 0 20 20" aria-hidden="true">
+                                              <defs>
+                                                <linearGradient id="halfGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                  <!-- Linke Hälfte: Gelb -->
+                                                  <stop offset="0%" stop-color="#ecc94b" />
+                                                  <stop offset="50%" stop-color="#ecc94b" />
+                                                  <!-- Rechte Hälfte: Grau -->
+                                                  <stop offset="50%" stop-color="#808080" />
+                                                  <stop offset="100%" stop-color="#808080" />
+                                                </linearGradient>
+                                              </defs>
+                                              <path fill="url(#halfGradient)" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div class="mt-4">
+                                          <p class="text-lg text-justify">
+                                            Die FocusWater-Werbung ist hervorragend gelungen, da sie genau die sportliche Zielgruppe anspricht. Durch den Clip vermittelt man das Gefühl, mit FocusWater zu einem besseren Leistungsniveau zu gelangen. Zudem spricht die Betonung des Schweizer Herkunftsaspekts die Vorliebe der Schweizer für heimische Produkte an – ein cleverer Schachzug. Einen kleinen Punktabzug gibt es allerdings, da die Werbung teilweise etwas zu verkäuferisch wirkt, was laut Robin Horner nicht optimal sei. Insgesamt ist der Spot kurz, die Botschaft klar und er hinterlässt ein positives Gefühl gegenüber dem Produkt.                                          </p>                                      
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+  
+                                    <div class="p-4">
+                                      <h4 class="text-lg">Folgende Grafik zeigt die Verteilung aller Bewertungen:</h4>
+                                      <h5 class="text-base font-semibold flex mt-4">Total Benutzerstimme(n): <p id="ad-2-rating-count" class="text-green-500 ml-2 mr-2"></p> </h5>
+                                    </div>
+                                  </div>
+    
+                                  </div>
+                            </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="mt-32">
+                          <div>
+                            <div class="rounded-2xl">
+                                <img class="w-full" src="graphics/Inter_discount_werbung.jpg"
+                                alt="Inter Discount advertisement" />
+                            </div>
+                            <div class="rounded-xl border-2 border-green-500 mt-6 p-2">
+                              <form action="#" method="GET" id="vid-3" class="my-8 block md:flex justify-between items-center">
+
+                                <div>
+                                  <div class="flex items-center space-x-2">
+                                    <!-- Star buttons -->
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                    <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                      <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="mt-0">
+                                  <button type="submit" class="w-3/4 md:w-full lg:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                </div>
+                                </form>
+                                <div>
+                                  <div class="hidden" id="avg-vid-3">
+                                    <div class="rounded-xl p-4">
+                                      <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                      <div class="flex items-center">
+                                        <p class="text-2xl" id="avg"></p>
+                                        <div class="flex items-center ml-4">
+                                          <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+  
+                                    <div>
+                                      <div class="rounded-xl p-4">
+                                        <div class="hidden" id="ad-3-vid-rating">2.0</div>
+                                        <h4 class="text-lg">Die Bewertung von uns ist:</h4>
+                                        <div class="flex items-center">
+                                          <p class="text-2xl">2.0</p>
+                                          <div class="flex items-center ml-4">
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                            <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div class="mt-4">
+                                          <p class="text-lg text-justify">
+                                            Die InterDiscount-Werbung war in ihrer Umsetzung äußerst ungeschickt. Die zugrunde liegende Prämisse, dass Frauen in einer Beziehung bestimmte Dienste erbringen müssten, stieß bei vielen auf Ablehnung <sub class="font-semibold text-sm">4</sub>. Zwar empfanden einige den humorvollen Ansatz als witzig, doch überwog für die Mehrheit der Zuschauer der negative Eindruck. Der daraus resultierende Shitstorm in den sozialen Medien war so heftig, dass InterDiscount den Werbespot letztlich zurückziehen musste. Viele Menschen nehmen lediglich die mediale Kritik wahr, ohne sich eine eigene differenzierte Meinung zu bilden. Insgesamt schadete der Spot dem Image des Unternehmens, da er nur bei einer sehr kleinen Gruppe positiv ankam.
+                                          </p>                                      
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+  
+                                    <div class="m-4">
+                                      <h4 class="text-lg">Folgende Grafik zeigt die Verteilung aller Bewertungen:</h4>
+                                      <h5 class="text-base font-semibold flex mt-4">Total Benutzerstimme(n): <p id="ad-3-rating-count" class="text-green-500 ml-2 mr-2"></p> </h5>
+                                    </div>
+                                  </div>
+    
+                                  </div>
+                            </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="mt-32">
+                          <div>
+                            <div class="rounded-2xl">
+                              <iframe height="400" src="https://www.youtube.com/embed/GIGHzloInk8?si=a7sbVIB08d8UKPqn" title="Digitec Galaxus Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                          <div class="rounded-xl border-2 border-green-500 mt-6 p-2">
+                            <form action="#" method="GET" id="vid-4" class="my-8 block md:flex justify-between items-center">
 
                               <div>
                                 <div class="flex items-center space-x-2">
@@ -116,68 +481,306 @@
                                 </div>
                               </div>
                               <div class="mt-0">
-                                <button type="submit" class="w-3/4 md:w-full md:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                                <button type="submit" class="w-3/4 md:w-full lg:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
                               </div>
                               </form>
+                              
                               <div>
-                                <div class="mt-8 hidden" id="avg-vid-1">
-                                  <div class="rounded-xl border border-black p-4">
+                                <div class="hidden" id="avg-vid-4">
+                                  <div class="rounded-xl p-4">
                                     <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
                                     <div class="flex items-center">
                                       <p class="text-2xl" id="avg"></p>
                                       <div class="flex items-center ml-4">
                                         <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
-                                        <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                           <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                         </svg>
-                                        <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                           <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                         </svg>
-                                        <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                           <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                         </svg>
-                                        <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                           <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                         </svg>
-                                        <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                           <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                         </svg>
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="mt-8">
-                                    <div class="rounded-xl border border-black p-4">
-                                      <div class="hidden" id="ad-1-vid-rating">4.5</div>
+                                  <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                  <div>
+                                    <div class="rounded-xl p-4">
+                                      <div class="hidden" id="ad-4-vid-rating">4.0</div>
                                       <h4 class="text-lg">Die Bewertung von uns ist:</h4>
                                       <div class="flex items-center">
-                                        <p class="text-2xl">4.5</p>
+                                        <p class="text-2xl">4.0</p>
                                         <div class="flex items-center ml-4">
-                                          <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
-                                          <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                             <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                           </svg>
-                                          <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                             <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                           </svg>
-                                          <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                             <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                           </svg>
-                                          <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                             <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                           </svg>
-                                          <svg class="md:h-12 md:w-12 h-8 w-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                             <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
                                           </svg>
                                         </div>
                                       </div>
+                                      <div class="mt-4">
+                                        <p class="text-lg text-justify">
+                                          Die Werbespots von Wingo folgen einem einheitlichen Konzept, bei dem vor allem die Vorzüge eines preisgünstigen Produkts im Mittelpunkt stehen. Die Clips sind kurz, prägnant und lassen kaum Raum für Interpretationen – es wird klar kommuniziert, dass Wingo für Schnelligkeit und günstige Preise steht. Mit einem Hauch von Humor, der durch den Auftritt des Komikers Charles Nguela verkörpert wird, gelingt es der Werbung, bei den Zuschauern gut anzukommen. Allerdings gibt es einen kleinen Abzug, da der Spot teilweise etwas zu verkäuferisch wirkt. Positiv hervorzuheben ist zudem der hohe Wiedererkennungswert, der durch den gezielten Einsatz von Farben und einem markanten Stil erzielt wird.                                        </p>
+                                      </div>
                                     </div>
                                   </div>
-                                  <div class="mt-8">
+                                  <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                  <div class="p-4">
                                     <h4 class="text-lg">Folgende Grafik zeigt die Verteilung aller Bewertungen:</h4>
+                                    <h5 class="text-base font-semibold flex mt-4">Total Benutzerstimme(n): <p id="ad-4-rating-count" class="text-green-500 ml-2 mr-2"></p> </h5>
                                   </div>
                                 </div>
   
                                 </div>
+                          </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="mt-32">
+                          <div>
+                            <div class="rounded-2xl">
+                              <iframe height="500" src="https://www.youtube.com/embed/ZbR_O-tjn_c?si=J5MLRfl9X7GEifHN" title="Digitec Galaxus Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                          <div class="rounded-xl border-2 border-green-500 mt-6 p-2">
+                            <form action="#" method="GET" id="vid-5" class="my-8 block md:flex justify-between items-center">
+
+                              <div>
+                                <div class="flex items-center space-x-2">
+                                  <!-- Star buttons -->
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="mt-0">
+                                <button type="submit" class="w-3/4 md:w-full lg:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                              </div>
+                              </form>
+                              <div>
+                                <div class="hidden" id="avg-vid-5">
+                                  <div class="rounded-xl p-4">
+                                    <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                    <div class="flex items-center">
+                                      <p class="text-2xl" id="avg"></p>
+                                      <div class="flex items-center ml-4">
+                                        <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                  <div>
+                                    <div class="rounded-xl p-4">
+                                      <div class="hidden" id="ad-5-vid-rating">2.0</div>
+                                      <h4 class="text-lg">Die Bewertung von uns ist:</h4>
+                                      <div class="flex items-center">
+                                        <p class="text-2xl">2.0</p>
+                                        <div class="flex items-center ml-4">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8" style="color: #808080;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <div class="mt-4">
+                                        <p class="text-lg text-justify">
+                                          Die Werbung entwickelt keinen Spannungsbogen und schafft es nicht, den Zuschauer zu fesseln. Die Ansprache der Zielgruppe erfolgt sehr vage, sodass weder spezifische Bedürfnisse noch Interessen berücksichtigt werden. Dadurch entsteht der Eindruck, dass diese Art von Werbung kaum Beachtung finden würde. Obwohl die Botschaft grundsätzlich klar formuliert ist, kommt sie nicht überzeugend rüber, weil es an einer emotionalen Ansprache fehlt, die bei den Zuschauern einen wirklichen Impuls auslöst.                                        </p>                                      
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                  <div class="p-4">
+                                    <h4 class="text-lg">Folgende Grafik zeigt die Verteilung aller Bewertungen:</h4>
+                                    <h5 class="text-base font-semibold flex mt-4">Total Benutzerstimme(n): <p id="ad-5-rating-count" class="text-green-500 ml-2 mr-2"></p> </h5>
+                                  </div>
+                                </div>
+  
+                                </div>
+                          </div>
+
+                            </form>
+                          </div>
+                        </div>
+                        <div class="mt-32">
+                          <div>
+                            <div class="rounded-2xl">
+                              <iframe height="400" src="https://www.youtube.com/embed/sh9gUWEx6Zk?si=IJds1ZbSCGybGvRZ" title="Digitec Galaxus Werbung" allow="web-share" class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                          <div class="rounded-xl border-2 border-green-500 mt-6 p-2">
+                            <form action="#" method="GET" id="vid-6" class="my-8 block md:flex justify-between items-center">
+
+                              <div>
+                                <div class="flex items-center space-x-2">
+                                  <!-- Star buttons -->
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="1">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="2">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="3">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="4">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                  <button type="button" class="text-gray-300 focus:outline-none hover:text-yellow-400" data-rating="5">
+                                    <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                      <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="mt-0">
+                                <button type="submit" class="w-3/4 md:w-full lg:mt-0 mt-8 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Bewertung schicken</button>
+                              </div>
+                              </form>
+                              <div>
+                                <div class="mt-8 hidden" id="avg-vid-6">
+                                  <div class="rounded-xl p-4">
+                                    <h4 class="text-lg">Danke für deine Bewertung! Die durchschnittliche Bewertung dieses Quizs aller Nutzer ist:</h4>
+                                    <div class="flex items-center">
+                                      <p class="text-2xl" id="avg"></p>
+                                      <div class="flex items-center ml-4">
+                                        <!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                        <svg class="md:h-12 md:w-12 h-8 w-8 dynamic" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                          <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                  <div>
+                                    <div class="rounded-xl p-4">
+                                      <div class="hidden" id="ad-6-vid-rating">5.0</div>
+                                      <h4 class="text-lg">Die Bewertung von uns ist:</h4>
+                                      <div class="flex items-center">
+                                        <p class="text-2xl">5.0</p>
+                                        <div class="flex items-center ml-4">
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                          <svg class="md:h-12 md:w-12 h-8 w-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"></path>
+                                          </svg>
+                                        </div>
+
+                                      </div>
+                                      <div class="mt-4">
+                                        <p class="text-lg text-justify">
+                                          Die Werbung verzichtet bewusst auf einen zu verkäuferischen Ton und weckt stattdessen die Neugier der Zuschauer auf den Käse. Durch das stilisierte Bild in traditionell schweizerischer Kleidung wird der Wiedererkennungswert zusätzlich gesteigert. Über die Jahre hat sich zudem der amüsante Mythos etabliert, dass das Rezept des Appenzeller Käses ein streng gehütetes, wertvolles Geheimnis ist. Ein weiterer Pluspunkt ist der Einsatz von Uwe Ochsenknecht, der mit seiner markanten Präsenz dem Spot zusätzlichen Charme verleiht.                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="w-full border-b-2 border-green-500 mt-4 mb-4"></div>
+
+                                  <div class="p-4">
+                                    <h4 class="text-lg">Folgende Grafik zeigt die Verteilung aller Bewertungen:</h4>
+                                    <h5 class="text-base font-semibold flex mt-4">Total Benutzerstimme(n): <p id="ad-6-rating-count" class="text-green-500 ml-2 mr-2"></p> </h5>
+                                  </div>
+                                </div>
+  
+                                </div>
+                          </div>
                             </form>
                           </div>
                         </div>

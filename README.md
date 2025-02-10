@@ -20,3 +20,10 @@ Des Weiteren Stützen wir uns auf Studien, entwickelt von Wirtschaftsexperten un
 2. Manuel Meier
 3. Joshua Azariah
 4. Tobias Jenny
+
+## Bereitsstellung der Webseite
+Die Webseite wird über Vercel gehostet. Durch Continuous Integration / Continuous Deployment wird nach jedem Commit auf den Hauptbranch automatisch bereitgestellt. Die Seite ist unter
+
+https://idpa-2025.vercel.app/
+
+abrufbar.
