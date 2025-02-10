@@ -1,494 +1,856 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virales Marketing in der Schweiz</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Virales Marketing in der Schweiz</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
-<body>
-    <div id="cookie-modal" class="hidden inset-0 flex items-center justify-center z-50">
-        <div class="bg-white opacity-100 p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
-            <div class="flex justify-center mb-4">
-                <svg class="h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M247.2 17c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9l-14.6-82.8c-3.9-22.1-14.6-42.3-30.7-57.9L388.9 57.5c-16.1-15.6-36.6-25.6-58.7-28.7L247.2 17zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
-                </svg>
+    <body>
+        <div id="cookie-modal"
+            class="hidden inset-0 flex items-center justify-center z-50">
+            <div
+                class="bg-white opacity-100 p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+                <div class="flex justify-center mb-4">
+                    <svg class="h-8 w-8 text-indigo-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M247.2 17c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9l-14.6-82.8c-3.9-22.1-14.6-42.3-30.7-57.9L388.9 57.5c-16.1-15.6-36.6-25.6-58.7-28.7L247.2 17zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">Cookies</h3>
+                <p class="text-sm text-gray-500 mt-2">
+                    Diese Seite verwendet YouTube-Videos, die Cookies setzen
+                    können. Bitte akzeptieren Sie, um die Inhalte zu sehen.
+                </p>
+                <button onclick="setCookieAccept()"
+                    class="mt-4 w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 rounded-md">
+                    Akzeptieren
+                </button>
             </div>
-            <h3 class="text-lg font-semibold text-gray-900">Cookies</h3>
-            <p class="text-sm text-gray-500 mt-2">
-                Diese Seite verwendet YouTube-Videos, die Cookies setzen können. Bitte akzeptieren Sie, um die Inhalte zu sehen.
-            </p>
-            <button onclick="setCookieAccept()" class="mt-4 w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 rounded-md">
-                Akzeptieren
-            </button>
         </div>
-    </div>
-    <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-        <header>
-            <nav class="bg-white">
-                <div class="mx-auto px-2 md:px-6 lg:px-8">
-                    <div class="relative flex h-16 justify-between">
-                        <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
-                            <!-- Mobile menu button -->
-                            <button type="button" id="menu-button"
-                                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
-                                aria-controls="mobile-menu" aria-expanded="false">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" aria-hidden="true" id="menu-open-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" aria-hidden="true" id="menu-close-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <header>
+                <nav class="bg-white">
+                    <div class="mx-auto px-2 md:px-6 lg:px-8">
+                        <div class="relative flex h-16 justify-between">
+                            <div
+                                class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                                <!-- Mobile menu button -->
+                                <button type="button" id="menu-button"
+                                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                                    aria-controls="mobile-menu"
+                                    aria-expanded="false">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="block h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true"
+                                        id="menu-open-icon">
+                                        <path stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                    <svg class="hidden h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true"
+                                        id="menu-close-icon">
+                                        <path stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+                                <div class="flex shrink-0 items-center">
+                                    <div
+                                        class="h-8 w-8 rounded-full bg-green-500"></div>
+                                </div>
+                                <div
+                                    class="hidden md:ml-16 md:flex md:space-x-16">
+                                    <a href="index.html"
+                                        class="inline-flex items-center border-b-2 border-transparent  px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
+                                    <a href="examples.html"
+                                        class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-green-500 border-green-500 hover:border-gray-300 hover:text-gray-700">Beispiele</a>
+                                    <a href="quiz.html"
+                                        class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
+                                    <a href="research.html"
+                                        class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
+                                        & Recherche</a>
+                                    <a href="about.html"
+                                        class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
+                                        uns</a>
+                                    <a href="sources.html"
+                                        class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quellen</a>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-                            <div class="flex shrink-0 items-center">
-                                <div class="h-8 w-8 rounded-full bg-green-500"></div>
-                            </div>
-                            <div class="hidden md:ml-16 md:flex md:space-x-16">
-                                <a href="index.html"
-                                    class="inline-flex items-center border-b-2 border-transparent  px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Übersicht</a>
-                                <a href="examples.html"
-                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-green-500 border-green-500 hover:border-gray-300 hover:text-gray-700">Beispiele</a>
-                                <a href="quiz.html"
-                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quiz</a>
-                                <a href="research.html"
-                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Interview
-                                    & Recherche</a>
-                                <a href="about.html"
-                                    class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Über
-                                    uns</a>
-                                <a href="sources.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Quellen</a>
-
-
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <!-- Mobile menu -->
-                <div class="hidden md:hidden" id="mobile-menu">
-                    <div class="space-y-1 pb-4 pt-2">
-                        <a href="index.html"
-                            class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
-                        <a href="examples.html"
-                            class="block  border-l-4 border-green-500 bg-green-50 text-green-700  py-2 text-gray-500  pl-3 pr-4 text-base font-medium">Beispiele</a>
-                        <a href="quiz.html"
-                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
-                        <a href="research.html"
-                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
-                            & Recherche</a>
-                        <a href="about.html"
-                            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
-                            uns</a>
-                        <a href="sources.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quellen</a>
-
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="bg-white py-16 sm:py-24">
-                <div class="mx-auto px-6 lg:px-8">
-
-                    <div class="mb-8">
-                        <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                            Beispiele</h2>
-                        <p class="mt-6 text-lg text-gray-600">Wir sehen jeden Tag Werbung. Sei es auf Social Media, im
-                            Fernseher oder sogar auf Plakaten. Einige davon bleiben uns mehr, andere weniger im
-                            Gedächtnis. Hier befinden sich einige Beispiele für einprägsame Werbungen, die das
-                            Marketing Best Practices für Werbungen perfekt umgesetzt haben.</p>
-                    </div>
-
-                    <div class="bg-white">
-                        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-
-                        <div class="flex flex-col gap-8">
-                            <div>
-                                <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                                    Mobiliar mit Humor</h3>
-                                <div class="rounded-2xl">
-                                    <iframe height="400"
-                                    src="https://www.youtube-nocookie.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk"
-                                    title="Mobiliar Werbung"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    class="rounded-xl w-full" referrerpolicy="strict-origin-when-cross-origin"
-                                    allowfullscreen></iframe>
-                                </div>
-
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Zielgruppen Ansprache</h4>
-                                <p class="text-lg text-gray-600 text-justify">
-                                    Die Zielgruppe der Mobiliar sind Erwachsene in allen möglichen Alterskategorien, weil diese Personen 
-                                    sich um ihre Versicherungen kümmern müssen und oft schon Eigentum haben. Noch spezifischer sind es eher 
-                                    ältere Erwachsene, da diese oft mehr Vermögen haben und somit oft auch mehr versichern lassen. Bei dieser 
-                                    Werbung nicht besonders angesprochen, aber auch eine attraktive Zielgruppe sind Menschen in Übergangsphasen 
-                                    im Leben, z.B. wenn man Kinder bekommt, gerade Erwachsen wird, sich dem Ruhestand nähert. Das, weil es Phasen 
-                                    sind, in denen man sich zum ersten Mal mit der Versicherung auseinandersetzen muss und oft eben offen gegenüber 
-                                    einer neuen Versicherung ist.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kreativität und Originalität</h4>
-                                <p class="text-lg text-gray-600">
-                                    Das Steckenpferd einer jeder Mobiliar-Werbung ist die Kreativität und Originalität. Das oft verwendete 
-                                    Strichmännli kommt hier zwar nicht zum Einsatz, allerdings gestaltet man die Werbung trotzdem humorvoll.
-                                     Wie aus dem Interview bekannt sind es oft reale Schadensfälle, welche es als Werbung schaffen, 
-                                     was bei dieser auch durchaus vorstellbar ist. Die Werbung trifft den Humor vieler Personen. Kreativ 
-                                     ist sie, insofern dass man wahrscheinlich nie ohne irgendetwas auf diese Idee kommen würde, allerdings 
-                                     durch die vielen Schadenfälle, welche die Mobiliar eben mitbekommt, entsteht der grosse Pool an lustigen 
-                                     Fällen. Die Sprache ist auch Mobiliar typisch sehr bewusst und einfach gewählt und es wird nicht mehr 
-                                     gesagt als wirklich nötig.
-
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Wirkung</h4>
-                                <p class="text-lg text-gray-600">
-                                    Die Werbung wirkt lustig und zeigt eben, wo die Mobiliar überall hilft. Man löst durch die Werbung ein 
-                                    gutes Gefühl bei den Kunden aus und verbindet dieses mit dem Unternehmen Mobiliar. Ausserdem zeigt die 
-                                    Mobiliar, dass sie die Menschlichkeit nicht verloren haben und auch bei Missgeschicken für den Kunden 
-                                    da sind. Dadurch wirken sie nahbar und freundlich. Das Image der Mobiliar welches dadurch entsteht, ist 
-                                    gar nicht Versicherungs-Ähnlich, sondern eher wie ein Freund, welcher für dich da ist und dich unterstützt. 
-                                    Der Kunde fühlt sich in sicheren, freundlichen und trotzdem seriösen Händen.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Virale Faktoren</h4>
-                                <p class="text-lg text-gray-600">
-                                    Viele Werbungen der Mobiliar sind als Einzelne nicht besonders bekannt. Wenn man aber darüber spricht, haben
-                                    viele Schweizer direkt ein Beispiel einer Werbung im Kopf, was das Ausmass an Bekanntheit und Kult dieser Werbungen
-                                    unterstreicht. Die "Pointe" der Werbung ist jeweils ganz am Ende der Geschichte, was zu einer hohen durchschnittlichen
-                                    "Watch-Time" führt und so die Werbung im Algorithmus gut bewertet.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Fazit</h4>
-                                <p class="text-lg text-gray-600">Die Mobiliar Werbung überzeugt durch ihren
-                                    spannungsbogen
-                                    und die gute Pointe. Besonders aber hat die Werbung den klassischen Mobiliar
-                                    "Charme"
-                                    und somit einen guten Wiedererkennungswert. Durch die Werbung entsteht ein lockeres
-                                    aber trotzdem seriöses Image welches bei Kunden gut ankommt. Die Werbung ziemlich
-                                    einfach gehalten und gut produziert, wodurch die Message einfach zugänglich ist.
-                                </p>
-
-                            </div>
-                            <div>
-                                <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                                    Burger King Missverständnis</h3>
-                                <img width="560" src="graphics/BK-women-belong-in-the-kitchen.jpg"
-                                    alt="Burger King advertisement" />
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Zielgruppen Ansprache</h4>
-                                <p class="text-lg text-gray-600 text-justify">
-                                    Die Zielgruppe von Burger King sind mehrheitlich junge Menschen, aber auch zum Teil
-                                    ältere Menschen oder Familien. Junge Menschen sind nicht nur Kunden sondern oft
-                                    machen oft auch einen grossen Teil der Arbeiter aus. An solche potentiellen Arbeiter
-                                    sollte diese Werbung auch gerichtet sein. Burger King wollte weibliche Köche
-                                    mit dieser Werbung ansprechen und darauf aufmerksam machen, dass die Frauenquote
-                                    in der Küche bei ihnen erstaunlich tief ist.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kreativität und Originalität</h4>
-                                <p class="text-lg text-gray-600">Die Originalität dieser Werbung steckt im Witz mit
-                                    alten
-                                    Geschlechterrollen. Da man früher fast immer im Haushalt hat arbeiten lassen.
-                                    Heutzutage
-                                    gilt dieses Modell als veraltet und Frauen arbeiten ebenso am normalen Arbeitsmarkt
-                                    wie Männer. Um darauf Aufmerksam zu machen, dass auch Frauen in der Burger King
-                                    Küche
-                                    arbeiten können, wurde dieser X Beitrag (damals noch Twitter) so veröffentlicht. Was
-                                    noch dazu kommt ist, dass dieser Post am internationalen Frauentag so veröffentlicht
-                                    wurde.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Wirkung</h4>
-                                <p class="text-lg text-gray-600">Auf die meisten Menschen welche den Post gesehen haben
-                                    hat der Post zu verwirrung geführt, da man nicht verstanden hat was der Witz daran
-                                    sein soll, da er auch nicht einfach zu verstehen ist ohne Kontext. Viele waren auch
-                                    verärgert über den Humor und fanden den Witz unangebracht. Somit führe dieser Post
-                                    zu vielen negativen Reaktionen. Besonders auch weil es der Frauentag war, hat man
-                                    Burger King vorgeworfen sich lustig über diesen Tag zu machen. <sub class="font-semibold text-sm">1</sub>
-
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Virale Faktoren</h4>
-                                <p class="text-lg text-gray-600">Da der Post zu sehr vielen interaktionen und
-                                    aufschreienden Menschen geführt hat, ist es nur logisch das der Post Viral
-                                    gegangen ist und so bekannt wurde. Der Beitrag hat oft starke Emotionen in
-                                    Menschen ausgelöst, was eine der besten Faktoren ist für Werbungen. Allerdings
-                                    hat dieser Post mehr negative als positive ausgelöst. Allerdings fanden den
-                                    Post auch viele lustig und er ist gut angekommen. Trotzdem wurde der Post nach
-                                    einiger Zeit gelöscht.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kritik</h4>
-                                <p class="text-lg text-gray-600">Diese Werbung kann man auf der Ebene des Humors am
-                                    besten Kritisieren, da es wirklich nicht den Humer vieler getroffen hat. Unerwartet
-                                    waren die Reaktionen nicht und die Marketing Abteilung von Burger King wusste
-                                    sicher dass es so kommen wird. Das Wissen darüber, dass man viele Menschen wütend
-                                    machen wird und es trotzdem zu veröffentlichen kann man und wurde auch kritisiert.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Fazit</h4>
-                                <p class="text-lg text-gray-600">Die von Burger King am internationalen Frauentag
-                                    veröffentlichte Werbung ist ein gutes Beispiel für unpassender Humor bei Werbungen.
-                                    Die Werbung zielte zwar darauf ab die Frauenquote in den Küchen zu erhöhen, löste
-                                    aber viele negative Reaktionen aus. Anstatt Gleichberechtigung zu fördern, gab es
-                                    nun Vorwürfe sich über den Frauentag lustig zu machen, was schlussendlich auch zum
-                                    löschen des Beitrags geführt hat. Für eine Werbung war die Message zu versteckt
-                                    und viele verstanden den Witz nicht, die Werbung war also nicht einfach und
-                                    zugänglich genug um von der breiten Masse als lustig wahrgenommen zu werden.
-                                    Provokante Werbung ist sehr riskant und kommt nur selten gut an. Die Werbung
-                                    erreichte zwar Viralität, das ganze aber auf Kosten von wütenden Kunden.
-                                </p>
-                            </div>
-                            <div>
-                                <h3
-                                    class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl mb-4">
-                                    Migros Weihnachtswerbung</h3>
-                                <div class="rounded-2xl">
-                                    <iframe height="400"
-                                    src="https://www.youtube-nocookie.com/embed/hOYpMdseGKk?si=y4npBJeVPYmU5nWw"
-                                    title="YouTube video player"
-                                    class="rounded-xl w-full"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Zielgruppen Ansprache</h4>
-                                <p class="text-lg text-gray-600 text-justify">Die Zielgruppe der Migros deckt alles
-                                    mögliche ab. Von Jung bis Alt, ob alleine oder Familie. Die Migros will jeden
-                                    ansprechen. Das Thema Liebe ist somit gut gewählt, da es eine Rolle in jedermanns
-                                    Leben spielt. Besonders während der Feiertage will die Migros durch die Werbung alle
-                                    daran erinnern, Zeit mit den Menschen zu verbringen welche einem am wichtigsten sind
-                                    und den Fokus auf die Werte Familie, Liebe und Gemeinschaft richten. Die Sprache von
-                                    Bild und Ton ist einfach und herzlich und somit Verständlich für alle. Die Szenen
-                                    welche gewählt wurden sind alltäglich und somit ebenso greifbar für die Zielgruppe.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kreativität und Originalität</h4>
-                                <p class="text-lg text-gray-600">Die Werbung wirbt nicht in klassischer Form für ein
-                                    Produkt, sondern soll ein gutes Gefühl und Werte übermitteln, welches Kunden dann in
-                                    Verbindung mit der Migros bringen. Allerdings ist der kleine Weihnachtswichtel Finn
-                                    mittlerweile bekannt für die Migros und steht somit für die Migros, was den
-                                    Wiedererkennungswert erhöht. Auch ist es typisch für die Migros jedes Jahr (nach
-                                    paar Jahren unterbruch) eben eine solche emotionale Geschichte um Finn zu
-                                    publizieren. </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Wirkung</h4>
-                                <p class="text-lg text-gray-600">Die Werbung wirkt auf verschiedenen Ebenen, vor allem
-                                    aber emotional. Durch die Verwendung von und allen bekannten Situationen kann sich
-                                    auch jeder gut in die Werbung versetzten was die Wirkung eben verstärkt. Die bewusst
-                                    gewählten Worte "Feiern wir unsere Liebsten" wirken so zum Schluss umso mehr. Im
-                                    anfälligsten Moment für Emotionen wird dann langsam das Migros Logo eingeblendet,
-                                    was uns eben diese Werte verknüpfen lässt <sub class="font-semibold text-sm">2</sub> .</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Virale Faktoren</h4>
-                                <p class="text-lg text-gray-600">Die emotionale Aufladung motiviert zum teilen durch den
-                                    "Tränenmoment-Effekt", was bei einigen Migros Weihnachtswerbungen bis zu 1.8
-                                    Millionen Aufrufen auf Youtube geführt hat. Auch auf Instagram und anderen
-                                    Plattformen führte diese Werbung stets zu zahlreichen Interaktionen und positiven
-                                    Reaktionen. Auch in den Medien gibt es immer wieder Berichte über diese "schöne"
-                                    Werbung wie z.B: auf persoenlich.com, 20 Minuten, Srf und bei der NZZ.</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kritik</h4>
-                                <p class="text-lg text-gray-600">Auf manche Menschen wirkt die Werbung zu sentimental
-                                    und somit gar abstossend. Ebenso kann die Werbung auf Menschen welche gerade erst
-                                    schlechte Erlebnisse mit der Liebe gemacht haben negativ Wirken und sie wieder auf
-                                    schlechte Gedanken bringen. Generell könnte man auch sagen, dass die Werbung nicht
-                                    wirklich wirbt für ein Produkt weshalb sie nicht ideal ist. In dem Fall Migros hier,
-                                    wird dies aber eine bewusste Entscheidung dagegen gewesen sein um den Hauptfokus auf
-                                    der Liebe und der Nähe zu halten.</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Fazit</h4>
-                                <p class="text-lg text-gray-600">Die Migros-Weihnachtskampagne «Finn entdeckt die Liebe»
-                                    ist ein Paradebeispiel für gelungenes emotionales Storytelling, das tief in der
-                                    Schweizer Kultur verankert ist. Durch die universelle Botschaft von Liebe, Familie
-                                    und Gemeinschaft gelingt es der Migros, eine breite Zielgruppe anzusprechen. Die
-                                    Wahl alltäglicher Szenen und die herzliche, unkomplizierte Bildsprache machen die
-                                    Werbung greifbar und identifikationsstark. Der Wiedererkennungswert der Figur "Finn"
-                                    stärkt zudem die Markenbindung und schafft eine jährlich wiederkehrende Tradition,
-                                    auf die viele Schweizer emotional reagieren. Die Kampagne verbindet die Marke nicht
-                                    nur mit positiven Emotionen, sondern festigt ihre Rolle als vertrauenswürdiger
-                                    Begleiter im Alltag, was gerade zur Weihnachtszeit ein entscheidender Erfolgsfaktor
-                                    ist.</p>
-                            </div>
-                            <div>
-                                <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                                    Nestle Greenwashing</h3>
-                                <div class="rounded-2xl">
-                                    <iframe height="400"
-                                    src="https://www.youtube-nocookie.com/embed/B_OKFUWsCKs?si=56F1VciAs1Uj5OmF"
-                                    title="YouTube video player"
-                                    class="rounded-xl w-full"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Zielgruppen Ansprache</h4>
-                                <p class="text-lg text-gray-600 text-justify">Die Zielgruppe von Nestle ist sehr breit
-                                    gefächert. Sie haben Produkte in allen Preisklassen in fast allen Ländern.
-                                    Grundsätzlich also ist fast jeder Mensch der Welt irgendwo Nestle Kunde und beim
-                                    normalen Einkaufen kommt man fast nicht drum herum etwas zu kaufen. Insbesondere
-                                    aber bei Klimawandel-Interessierten Menschen steht Nestle in keinem guten Licht,
-                                    weshalb die Zielgruppe für diese Werbung vor allem diesem betrifft. Allerdings gut
-                                    angekommen ist die Werbung gar nicht und man kann schon von einem Schuss nach hinten
-                                    reden. Man sprach die Zielgruppe zwar an, allerdings negativ und es gab viele
-                                    negative Reaktionen, da Nestle in der Vergangenheit und bis Heute schon oft negativ
-                                    aufgefallen war bezüglich Natur-/Umweltschutz und Menschenrechte.</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kreativität und Originalität</h4>
-                                <p class="text-lg text-gray-600">Diese Werbung zielt auch nicht klassischer Weise auf
-                                    ein Produkt ab, sondern mehr auf die Marke Nestle und um deren Bemühungen um die
-                                    Erde zu zeigen. Die Werbung ist kreativ gestaltet und zieht das Thema KI, Umwelt und
-                                    Zukunft durch. Auch das die Bilder von KI generiert wurden wirkt originell, da dies
-                                    auch offen klargestellt wird. Ebenso wird ein roter Faden durchgezogen und der
-                                    Spannungsbogen ist gut gemacht, so dass man gerne bis zum Schluss zuhört.</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Wirkung</h4>
-                                <p class="text-lg text-gray-600">Durch eine gut produzierte Werbung, spannende Musik und
-                                    einen guten Ablauf wirkt die Werbung spannend und vor allem Visionär. Sie trifft den
-                                    Zeitgeist und weckt viele Reaktionen, jedoch sind diese oft Negativ. Das Unternehmen
-                                    will ihre Bemühungen offenlegen und das Markenimage verbessern. Nestle provozierte
-                                    viele emotionale Reaktionen, aber eben Negative wie Wut und Frust bei
-                                    Klimainteressierten. Auf andere welche das Wissen und den Bezug zum Klimawandel
-                                    nicht haben, wirkt die Werbugn Angstauslösend, da die Zukunft furchteinflössend
-                                    dargestellt wird <sub class="font-semibold text-sm">3</sub>.</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Virale Faktoren</h4>
-                                <p class="text-lg text-gray-600">Diese Werbung ist auf viel Kritik gestossen wie die
-                                    Marke Nestle schon öfters die Anschuldigung auf Greenwashing bekommen hat. Das viele
-                                    Personen emotional reagiert haben führte dazu, dass die Werbung oft geteilt und
-                                    darauf regiert wurde. Ebenso dass aktuelle Themen angesprochen werden führt dazu
-                                    dass die Werbung als Spannend warhgenommen wird.</p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kritik</h4>
-                                <p class="text-lg text-gray-600">Der einzige Kritik Punkt an der Werbung kann an der
-                                    ehrlichkeit und transparenz am Unternehmen gemacht werden. Besonders eben das Thema
-                                    Greenwashing und Menschenrechte sind bei Nestle öfters zu kritisieren. </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Fazit</h4>
-                                <p class="text-lg text-gray-600">Die Werbung von Nestle funktioniert auf gut produzierte
-                                    Art das Markenimage zu reparieren. Durch bewusst gewählte Musik und Schnitt wirkt es
-                                    dringlich und löst Angst und sogleich am Ende hoffnun in Menschen aus. Die Werbung
-                                    überzeugt in Originalität und Kreativität, die Glaubwürdigkeitslücke ist allerdings
-                                    zu gross und so wird das andere ausgehebelt. Die Werbung kommt sehr schlecht an und
-                                    verbessert das Markenimage keineswegs. Wichtig für Nestle wäre es sich wirklich zu
-                                    bemühen und transparent gegenüber den Kunden zu sein um glaubwürdig zu wirken.</p>
-                            </div>
-                            <div>
-                                <h3 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                                    Freeways auf Strasse</h3>
-                                <div class="rounded-2xl">
-                                    <iframe height="400"
-                                    src="https://www.youtube-nocookie.com/embed/XDtohWAQTeg?si=Yh3qc-zbtopAbbTO"
-                                    title="YouTube video player"
-                                    class="rounded-xl w-full"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Zielgruppen Ansprache</h4>
-                                <p class="text-lg text-gray-600 text-justify">
-                                    Die Zielgruppe von Freeways sind grundsätzlich alle Menschen. Insbesondere bei
-                                    jüngere Menschen kommen aber gesundheitsfördernde Produkte gut an, weshalb Robin
-                                    seine Werbung auf junge ausgelegt hat. Man merkt es dadurch, dass er sehr Social
-                                    Media orientierte Videos macht und oft mit Influencern wirbt. Dadurch erhalten
-                                    Videos viele Aufrufe und gehen so viral.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kreativität und Originalität</h4>
-                                <p class="text-lg text-gray-600">Die Werbung überzeugt nicht durch besondere Kreativität
-                                    oder Originalität. Sie lässt mehr das Produkt für sich sprechen, da es wirklich gut
-                                    ist. Die Idee dann zufällige Personen auf der Strasse testen zu lassen und die
-                                    Meinung zu sagen ist sehr gut, da es sehr glaubwürdig wirkt. Grundsätzlich lässt er
-                                    das Produkt immer für sich selber sprechen, was auch das Produkt gut wirken lässt,
-                                    da die Reaktionen im Werbevideo nicht so wären.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Wirkung</h4>
-                                <p class="text-lg text-gray-600">Durch die Werbung wirkt das Produkt sehr gut und
-                                    überzeugend.
-                                    Sie vermittelt qualität und den nutzen des Produkts, setzt aber auch hohe Ansprüche.
-                                    Durch die Einfachheit des Videos wirkt alles auch sehr autenthisch und löst in
-                                    Kunden ein lockeres Gefühl aus, wo man sich nicht zum Kaufen gezwungen fühlt, es
-                                    aber zumindest gerne ausprobieren würde.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Virale Faktoren</h4>
-                                <p class="text-lg text-gray-600">Diese Werbung geht vor allem Viral wegen der krassen
-                                    und ehrlichen Reaktionen der Testpersonen. Andere Werbungen von Freeways entstehen
-                                    in zusammenarbeit mit Influencern welche deshalb viral gehen. Die krassen Reaktionen
-                                    lösen oft interaktionen von den Kunden aus, was die Videos im Algorithmus pusht und
-                                    so noch mehr Menschen angezeigt werden. Besonders wichtig ist im Social Media
-                                    bereich dass die Werbung den Zuschauer unterhält und so das Video bis zum Schluss
-                                    anschaut.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Kritik</h4>
-                                <p class="text-lg text-gray-600">Die einzige Kritik welche man an den Werbungen oder
-                                    insbesondere dieser ausüben kann, geht die Glaubwürdigkeit an. Man könnte Vermuten
-                                    die Reaktionen sind überspitzt und abgesprochen.
-                                </p>
-                                <h4
-                                    class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
-                                    Fazit</h4>
-                                <p class="text-lg text-gray-600">Freeways setzt mit dieser Werbung vor allem auf das
-                                    Produkt. Die Werbung ist einfach und ehrlich produziert und versucht nicht direkt
-                                    etwas zu verkaufen und lässt die Reaktionen der Leute für sich sprechen. Durch
-                                    die Menge an positiven Reaktionen und bekannten Influencer welche das Produkt für
-                                    gut empfinden, baut man ein Vertrauen auf und möchte das Produkt selbst
-                                    ausprobieren. 
-                                </p>
-                            </div>
+                    <!-- Mobile menu -->
+                    <div class="hidden md:hidden" id="mobile-menu">
+                        <div class="space-y-1 pb-4 pt-2">
+                            <a href="index.html"
+                                class="block border-l-4 border-transparent  text-gray-500 py-2 pl-3 pr-4 text-base font-medium">Übersicht</a>
+                            <a href="examples.html"
+                                class="block  border-l-4 border-green-500 bg-green-50 text-green-700  py-2 text-gray-500  pl-3 pr-4 text-base font-medium">Beispiele</a>
+                            <a href="quiz.html"
+                                class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quiz</a>
+                            <a href="research.html"
+                                class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Interview
+                                & Recherche</a>
+                            <a href="about.html"
+                                class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Über
+                                uns</a>
+                            <a href="sources.html"
+                                class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Quellen</a>
 
                         </div>
                     </div>
-                    </div>
-                </div>
+                </nav>
+            </header>
+            <main>
+                <div class="bg-white py-16 sm:py-24">
+                    <div class="mx-auto px-6 lg:px-8">
 
-            </div>
-        </main>
-    </div>
-    <script src="scripts/cookies.js"></script>
-    <script src="scripts/auth.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script>
+                        <div class="mb-8">
+                            <h2
+                                class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                                Beispiele</h2>
+                            <p class="mt-6 text-lg text-gray-600">Wir sehen
+                                jeden Tag Werbung. Sei es auf Social Media, im
+                                Fernseher oder sogar auf Plakaten. Einige davon
+                                bleiben uns mehr, andere weniger im
+                                Gedächtnis. Hier befinden sich einige Beispiele
+                                für einprägsame Werbungen, die das
+                                Marketing Best Practices für Werbungen perfekt
+                                umgesetzt haben.</p>
+                        </div>
+
+                        <div class="bg-white">
+                            <div
+                                class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+
+                                <div class="flex flex-col gap-8">
+                                    <div>
+                                        <h3
+                                            class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                            Mobiliar mit Humor</h3>
+                                        <div class="rounded-2xl">
+                                            <iframe height="400"
+                                                src="https://www.youtube-nocookie.com/embed/CD3A22WeZoc?si=Y2mmoIpD4yl0v8nk"
+                                                title="Mobiliar Werbung"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                class="rounded-xl w-full"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Zielgruppen Ansprache</h4>
+                                        <p
+                                            class="text-lg text-gray-600 text-justify">
+                                            Die Zielgruppe der Mobiliar sind
+                                            Erwachsene in allen möglichen
+                                            Alterskategorien, weil diese
+                                            Personen
+                                            sich um ihre Versicherungen kümmern
+                                            müssen und oft schon Eigentum haben.
+                                            Noch spezifischer sind es eher
+                                            ältere Erwachsene, da diese oft mehr
+                                            Vermögen haben und somit oft auch
+                                            mehr versichern lassen. Bei dieser
+                                            Werbung nicht besonders
+                                            angesprochen, aber auch eine
+                                            attraktive Zielgruppe sind Menschen
+                                            in Übergangsphasen
+                                            im Leben, z.B. wenn man Kinder
+                                            bekommt, gerade Erwachsen wird, sich
+                                            dem Ruhestand nähert. Das, weil es
+                                            Phasen
+                                            sind, in denen man sich zum ersten
+                                            Mal mit der Versicherung
+                                            auseinandersetzen muss und oft eben
+                                            offen gegenüber
+                                            einer neuen Versicherung ist.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kreativität und Originalität</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Das Steckenpferd einer jeder
+                                            Mobiliar-Werbung ist die Kreativität
+                                            und Originalität. Das oft verwendete
+                                            Strichmännli kommt hier zwar nicht
+                                            zum Einsatz, allerdings gestaltet
+                                            man die Werbung trotzdem humorvoll.
+                                            Wie aus dem Interview bekannt sind
+                                            es oft reale Schadensfälle, welche
+                                            es als Werbung schaffen,
+                                            was bei dieser auch durchaus
+                                            vorstellbar ist. Die Werbung trifft
+                                            den Humor vieler Personen. Kreativ
+                                            ist sie, insofern dass man
+                                            wahrscheinlich nie ohne irgendetwas
+                                            auf diese Idee kommen würde,
+                                            allerdings
+                                            durch die vielen Schadenfälle,
+                                            welche die Mobiliar eben mitbekommt,
+                                            entsteht der grosse Pool an lustigen
+                                            Fällen. Die Sprache ist auch
+                                            Mobiliar typisch sehr bewusst und
+                                            einfach gewählt und es wird nicht
+                                            mehr
+                                            gesagt als wirklich nötig.
+
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Wirkung</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die Werbung wirkt lustig und zeigt
+                                            eben, wo die Mobiliar überall hilft.
+                                            Man löst durch die Werbung ein
+                                            gutes Gefühl bei den Kunden aus und
+                                            verbindet dieses mit dem Unternehmen
+                                            Mobiliar. Ausserdem zeigt die
+                                            Mobiliar, dass sie die
+                                            Menschlichkeit nicht verloren haben
+                                            und auch bei Missgeschicken für den
+                                            Kunden
+                                            da sind. Dadurch wirken sie nahbar
+                                            und freundlich. Das Image der
+                                            Mobiliar welches dadurch entsteht,
+                                            ist
+                                            gar nicht Versicherungs-Ähnlich,
+                                            sondern eher wie ein Freund, welcher
+                                            für dich da ist und dich
+                                            unterstützt.
+                                            Der Kunde fühlt sich in sicheren,
+                                            freundlichen und trotzdem seriösen
+                                            Händen.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Virale Faktoren</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Viele Werbungen der Mobiliar sind
+                                            als Einzelne nicht besonders
+                                            bekannt. Wenn man aber darüber
+                                            spricht, haben
+                                            viele Schweizer direkt ein Beispiel
+                                            einer Werbung im Kopf, was das
+                                            Ausmass an Bekanntheit und Kult
+                                            dieser Werbungen
+                                            unterstreicht. Die "Pointe" der
+                                            Werbung ist jeweils ganz am Ende der
+                                            Geschichte, was zu einer hohen
+                                            durchschnittlichen
+                                            "Watch-Time" führt und so die
+                                            Werbung im Algorithmus gut bewertet.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Fazit</h4>
+                                        <p class="text-lg text-gray-600">Die
+                                            Mobiliar Werbung überzeugt durch
+                                            ihren
+                                            spannungsbogen
+                                            und die gute Pointe. Besonders aber
+                                            hat die Werbung den klassischen
+                                            Mobiliar
+                                            "Charme"
+                                            und somit einen guten
+                                            Wiedererkennungswert. Durch die
+                                            Werbung entsteht ein lockeres
+                                            aber trotzdem seriöses Image welches
+                                            bei Kunden gut ankommt. Die Werbung
+                                            ziemlich
+                                            einfach gehalten und gut produziert,
+                                            wodurch die Message einfach
+                                            zugänglich ist.
+                                        </p>
+
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                            Burger King Missverständnis</h3>
+                                        <img width="560"
+                                            src="graphics/BK-women-belong-in-the-kitchen.jpg"
+                                            alt="Burger King advertisement" />
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Zielgruppen Ansprache</h4>
+                                        <p
+                                            class="text-lg text-gray-600 text-justify">
+                                            Die Zielgruppe von Burger King sind
+                                            mehrheitlich junge Menschen, aber
+                                            auch zum Teil
+                                            ältere Menschen oder Familien. Junge
+                                            Menschen sind nicht nur Kunden
+                                            sondern oft
+                                            machen oft auch einen grossen Teil
+                                            der Arbeiter aus. An solche
+                                            potentiellen Arbeiter
+                                            sollte diese Werbung auch gerichtet
+                                            sein. Burger King wollte weibliche
+                                            Köche
+                                            mit dieser Werbung ansprechen und
+                                            darauf aufmerksam machen, dass die
+                                            Frauenquote
+                                            in der Küche bei ihnen erstaunlich
+                                            tief ist.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kreativität und Originalität</h4>
+                                        <p class="text-lg text-gray-600">Die
+                                            Originalität dieser Werbung steckt
+                                            im Witz mit
+                                            alten
+                                            Geschlechterrollen. Da man früher
+                                            fast immer im Haushalt hat arbeiten
+                                            lassen.
+                                            Heutzutage
+                                            gilt dieses Modell als veraltet und
+                                            Frauen arbeiten ebenso am normalen
+                                            Arbeitsmarkt
+                                            wie Männer. Um darauf Aufmerksam zu
+                                            machen, dass auch Frauen in der
+                                            Burger King
+                                            Küche
+                                            arbeiten können, wurde dieser X
+                                            Beitrag (damals noch Twitter) so
+                                            veröffentlicht. Was
+                                            noch dazu kommt ist, dass dieser
+                                            Post am internationalen Frauentag so
+                                            veröffentlicht
+                                            wurde.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Wirkung</h4>
+                                        <p class="text-lg text-gray-600">Auf die
+                                            meisten Menschen welche den Post
+                                            gesehen haben
+                                            hat der Post zu verwirrung geführt,
+                                            da man nicht verstanden hat was der
+                                            Witz daran
+                                            sein soll, da er auch nicht einfach
+                                            zu verstehen ist ohne Kontext. Viele
+                                            waren auch
+                                            verärgert über den Humor und fanden
+                                            den Witz unangebracht. Somit führe
+                                            dieser Post
+                                            zu vielen negativen Reaktionen.
+                                            Besonders auch weil es der Frauentag
+                                            war, hat man
+                                            Burger King vorgeworfen sich lustig
+                                            über diesen Tag zu machen. <sub
+                                                class="font-semibold text-sm">1</sub>
+
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Virale Faktoren</h4>
+                                        <p class="text-lg text-gray-600">Da der
+                                            Post zu sehr vielen interaktionen
+                                            und
+                                            aufschreienden Menschen geführt hat,
+                                            ist es nur logisch das der Post
+                                            Viral
+                                            gegangen ist und so bekannt wurde.
+                                            Der Beitrag hat oft starke Emotionen
+                                            in
+                                            Menschen ausgelöst, was eine der
+                                            besten Faktoren ist für Werbungen.
+                                            Allerdings
+                                            hat dieser Post mehr negative als
+                                            positive ausgelöst. Allerdings
+                                            fanden den
+                                            Post auch viele lustig und er ist
+                                            gut angekommen. Trotzdem wurde der
+                                            Post nach
+                                            einiger Zeit gelöscht.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kritik</h4>
+                                        <p class="text-lg text-gray-600">Diese
+                                            Werbung kann man auf der Ebene des
+                                            Humors am
+                                            besten Kritisieren, da es wirklich
+                                            nicht den Humer vieler getroffen
+                                            hat. Unerwartet
+                                            waren die Reaktionen nicht und die
+                                            Marketing Abteilung von Burger King
+                                            wusste
+                                            sicher dass es so kommen wird. Das
+                                            Wissen darüber, dass man viele
+                                            Menschen wütend
+                                            machen wird und es trotzdem zu
+                                            veröffentlichen kann man und wurde
+                                            auch kritisiert.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Fazit</h4>
+                                        <p class="text-lg text-gray-600">Die von
+                                            Burger King am internationalen
+                                            Frauentag
+                                            veröffentlichte Werbung ist ein
+                                            gutes Beispiel für unpassender Humor
+                                            bei Werbungen.
+                                            Die Werbung zielte zwar darauf ab
+                                            die Frauenquote in den Küchen zu
+                                            erhöhen, löste
+                                            aber viele negative Reaktionen aus.
+                                            Anstatt Gleichberechtigung zu
+                                            fördern, gab es
+                                            nun Vorwürfe sich über den Frauentag
+                                            lustig zu machen, was schlussendlich
+                                            auch zum
+                                            löschen des Beitrags geführt hat.
+                                            Für eine Werbung war die Message zu
+                                            versteckt
+                                            und viele verstanden den Witz nicht,
+                                            die Werbung war also nicht einfach
+                                            und
+                                            zugänglich genug um von der breiten
+                                            Masse als lustig wahrgenommen zu
+                                            werden.
+                                            Provokante Werbung ist sehr riskant
+                                            und kommt nur selten gut an. Die
+                                            Werbung
+                                            erreichte zwar Viralität, das ganze
+                                            aber auf Kosten von wütenden Kunden.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl mb-4">
+                                            Migros Weihnachtswerbung</h3>
+                                        <div class="rounded-2xl">
+                                            <iframe height="400"
+                                                src="https://www.youtube-nocookie.com/embed/hOYpMdseGKk?si=y4npBJeVPYmU5nWw"
+                                                title="YouTube video player"
+                                                class="rounded-xl w-full"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Zielgruppen Ansprache</h4>
+                                        <p
+                                            class="text-lg text-gray-600 text-justify">
+                                            Die Zielgruppe der Migros deckt
+                                            alles Mögliche ab. Von Jung bis Alt,
+                                            ob alleine oder Familie. Die Migros
+                                            möchte jeden ansprechen. Das Thema
+                                            Liebe ist somit gut gewählt, da es
+                                            eine Rolle in jedermanns Leben
+                                            spielt. Besonders während der
+                                            Feiertage will die Migros durch die
+                                            Werbung alle daran erinnern, Zeit
+                                            mit den Menschen zu verbringen,
+                                            welche einem am wichtigsten sind,
+                                            und den Fokus auf die Werte Familie,
+                                            Liebe und Gemeinschaft richten. Die
+                                            Sprache von Bild und Ton ist
+                                            einfach, herzlich und somit
+                                            verständlich für alle. Die Szenen
+                                            welche gewählt wurden sind
+                                            alltäglich und somit ebenso greifbar
+                                            für die Zielgruppe.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kreativität und Originalität</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die Werbung wirbt nicht in
+                                            klassischer Form für ein Produkt,
+                                            sondern soll ein gutes Gefühl und
+                                            Werte übermitteln, welches Kunden
+                                            dann in Verbindung mit der Migros
+                                            bringen. Allerdings ist der kleine
+                                            Weihnachtswichtel Finn mittlerweile
+                                            bekannt für die Migros und steht
+                                            somit für die Migros, was den
+                                            Wiedererkennungswert erhöht. Auch
+                                            ist es typisch für die Migros jedes
+                                            Jahr (nach ein paar Jahren
+                                            Unterbruch) eben eine solche
+                                            emotionale Geschichte um Finn zu
+                                            publizieren.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Wirkung</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die Werbung wirkt auf verschiedenen
+                                            Ebenen, vor allem aber emotional.
+                                            Durch die Verwendung von und allen
+                                            bekannten Situationen kann sich auch
+                                            jeder gut in die Werbung versetzen,
+                                            was die Wirkung eben verstärkt. Die
+                                            bewusst gewählten Worte
+                                            "Feiern wir unsere Liebsten" wirken
+                                            so zum Schluss umso mehr. Im
+                                            anfälligsten Moment für Emotionen
+                                            wird dann langsam das Migros Logo
+                                            eingeblendet, was uns ebendiese
+                                            Werte verknüpfen lässt
+                                            <sub
+                                                class="font-semibold text-sm">2</sub>
+                                            .</p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Virale Faktoren</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die emotionale Aufladung motiviert
+                                            zum Teilen durch den
+                                            "Tränenmoment-Effekt", was bei
+                                            einigen Migros Weihnachtswerbungen
+                                            bis zu 1.8 Millionen Aufrufen auf
+                                            YouTube geführt hat. Auch auf
+                                            Instagram und anderen Plattformen
+                                            führte diese Werbung stets zu
+                                            zahlreichen Interaktionen und
+                                            positiven Reaktionen. Auch in den
+                                            Medien gibt es immer wieder Berichte
+                                            über diese "schöne" Werbung wie z.
+                                            B.: auf persoenlich.com, 20 Minuten,
+                                            SRF und bei der NZZ.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kritik</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Auf manche Menschen wirkt die
+                                            Werbung zu sentimental und somit gar
+                                            abstossend. Ebenso kann die Werbung
+                                            auf Menschen, welche gerade erst
+                                            schlechte Erlebnisse mit der Liebe
+                                            gemacht haben, negativ wirken und
+                                            sie wieder auf schlechte Gedanken
+                                            bringen. Generell könnte man auch
+                                            sagen, dass die Werbung nicht
+                                            wirklich für ein Produkt wirbt,
+                                            weshalb sie nicht ideal ist. In dem
+                                            Fall Migros hier wird dies aber eine
+                                            bewusste Entscheidung dagegen
+                                            gewesen sein, um den Hauptfokus auf
+                                            der Liebe und der Nähe zu halten.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Fazit</h4>
+                                        <p class="text-lg text-gray-600">Die
+                                            Migros-Weihnachtskampagne «Finn
+                                            entdeckt die Liebe»
+                                            ist ein Paradebeispiel für
+                                            gelungenes emotionales Storytelling,
+                                            das tief in der
+                                            Schweizer Kultur verankert ist.
+                                            Durch die universelle Botschaft von
+                                            Liebe, Familie
+                                            und Gemeinschaft gelingt es der
+                                            Migros, eine breite Zielgruppe
+                                            anzusprechen. Die
+                                            Wahl alltäglicher Szenen und die
+                                            herzliche, unkomplizierte
+                                            Bildsprache machen die
+                                            Werbung greifbar und
+                                            identifikationsstark. Der
+                                            Wiedererkennungswert der Figur
+                                            "Finn"
+                                            stärkt zudem die Markenbindung und
+                                            schafft eine jährlich wiederkehrende
+                                            Tradition,
+                                            auf die viele Schweizer emotional
+                                            reagieren. Die Kampagne verbindet
+                                            die Marke nicht
+                                            nur mit positiven Emotionen, sondern
+                                            festigt ihre Rolle als
+                                            vertrauenswürdiger
+                                            Begleiter im Alltag, was gerade zur
+                                            Weihnachtszeit ein entscheidender
+                                            Erfolgsfaktor
+                                            ist.</p>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                            Nestle Greenwashing</h3>
+                                        <div class="rounded-2xl">
+                                            <iframe height="400"
+                                                src="https://www.youtube-nocookie.com/embed/B_OKFUWsCKs?si=56F1VciAs1Uj5OmF"
+                                                title="YouTube video player"
+                                                class="rounded-xl w-full"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Zielgruppen Ansprache</h4>
+                                        <p
+                                            class="text-lg text-gray-600 text-justify">
+                                            Die Zielgruppe von Nestlé ist sehr
+                                            breit gefächert. Sie haben Produkte
+                                            in allen Preisklassen in fast allen
+                                            Ländern. Grundsätzlich also ist fast
+                                            jeder Mensch der Welt irgendwo
+                                            Nestlé Kunde und beim normalen
+                                            Einkaufen kommt man fast nicht
+                                            drumherum, etwas zu kaufen.
+                                            Insbesondere aber bei
+                                            Klimawandel-Interessierten Menschen
+                                            steht Nestlé in keinem guten Licht,
+                                            weshalb die Zielgruppe für diese
+                                            Werbung vor allem diese betrifft.
+                                            Gut angekommen ist die Werbung
+                                            allerdings gar nicht und man kann
+                                            schon von einem Schuss nach hinten
+                                            reden. Man sprach die Zielgruppe
+                                            zwar an, allerdings negativ und es
+                                            gab viele negative Reaktionen, da
+                                            Nestlé in der Vergangenheit und bis
+                                            heute schon oft negativ aufgefallen
+                                            war bezüglich Natur-/Umweltschutz
+                                            und Menschenrechte.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kreativität und Originalität</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Diese Werbung zielt auch nicht
+                                            klassischerweise auf ein Produkt ab,
+                                            sondern mehr auf die Marke Nestlé
+                                            und um deren Bemühungen um die Erde
+                                            zu zeigen. Die Werbung ist kreativ
+                                            gestaltet und zieht das Thema KI,
+                                            Umwelt und Zukunft durch. Auch dass
+                                            die Bilder von KI generiert wurden,
+                                            wirkt originell, da dies auch offen
+                                            klargestellt wird. Ebenso wird ein
+                                            roter Faden durchgezogen und der
+                                            Spannungsbogen ist gut gemacht,
+                                            sodass man gerne bis zum Schluss
+                                            zuhört.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Wirkung</h4>
+                                        <p class="text-lg text-gray-600">Durch
+                                            eine gut produzierte Werbung,
+                                            spannende Musik und einen guten
+                                            Ablauf wirkt die Werbung spannend
+                                            und vor allem visionär. Sie trifft
+                                            den Zeitgeist und weckt viele
+                                            Reaktionen, jedoch sind diese oft
+                                            negativ. Das Unternehmen möchte ihre
+                                            Bemühungen offenlegen und das
+                                            Markenimage verbessern. Nestlé
+                                            provozierte viele emotionale
+                                            Reaktionen, aber eben Negative wie
+                                            Wut und Frust bei
+                                            Klimainteressierten. Auf andere,
+                                            welche das Wissen und den Bezug zum
+                                            Klimawandel nicht haben, wirkt die
+                                            Werbung angstauslösend, da die
+                                            Zukunft furchteinflössend
+                                            dargestellt wird <sub
+                                                class="font-semibold text-sm">3</sub>.</p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Virale Faktoren</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Diese Werbung ist auf viel Kritik
+                                            gestossen, wie die Marke Nestlé
+                                            schon öfter die Anschuldigung auf
+                                            Greenwashing bekommen hat. Dass
+                                            viele Personen emotional reagiert
+                                            haben, führte dazu, dass die Werbung
+                                            oft geteilt und darauf regiert
+                                            wurde. Ebenso, dass aktuelle Themen
+                                            angesprochen werden, führt dazu,
+                                            dass die Werbung als spannend
+                                            wahrgenommen wird.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kritik</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Der einzige Kritikpunkt an der
+                                            Werbung kann an der Ehrlichkeit und
+                                            Transparenz am Unternehmen gemacht
+                                            werden. Besonders eben die Themen
+                                            Greenwashing und Menschenrechte sind
+                                            bei Nestlé öfters zu kritisieren.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Fazit</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die Werbung von Nestlé funktioniert
+                                            auf gut produzierte Art, um das
+                                            Markenimage zu reparieren. Durch
+                                            bewusst gewählte Musik und Schnitt
+                                            wirkt es dringlich und löst Angst
+                                            und sogleich am Ende Hoffnung in
+                                            Menschen aus. Die Werbung überzeugt
+                                            in Originalität und Kreativität, die
+                                            Glaubwürdigkeitslücke ist allerdings
+                                            zu gross und so wird das andere
+                                            ausgehebelt. Die Werbung kommt sehr
+                                            schlecht an und verbessert das
+                                            Markenimage keineswegs. Wichtig für
+                                            Nestlé wäre es, sich wirklich zu
+                                            bemühen und transparent gegenüber
+                                            den Kunden zu sein, um glaubwürdig
+                                            zu wirken.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                            Freeways auf Strasse</h3>
+                                        <div class="rounded-2xl">
+                                            <iframe height="400"
+                                                src="https://www.youtube-nocookie.com/embed/XDtohWAQTeg?si=Yh3qc-zbtopAbbTO"
+                                                title="YouTube video player"
+                                                class="rounded-xl w-full"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Zielgruppen Ansprache</h4>
+                                        <p
+                                            class="text-lg text-gray-600 text-justify">
+                                            Die Zielgruppe von Freeways sind
+                                            grundsätzlich alle Menschen.
+                                            Insbesondere bei jüngeren Menschen
+                                            kommen aber gesundheitsfördernde
+                                            Produkte gut an, weshalb Robin seine
+                                            Werbung auf Junge ausgelegt hat. Man
+                                            merkt es dadurch, dass er sehr
+                                            Social Media orientierte Videos
+                                            macht und oft mit Influencern wirbt.
+                                            Dadurch erhalten Videos viele
+                                            Aufrufe und gehen so viral.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kreativität und Originalität</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die Werbung überzeugt nicht durch
+                                            besondere Kreativität oder
+                                            Originalität. Sie lässt mehr das
+                                            Produkt für sich sprechen, da es
+                                            wirklich gut ist. Die Idee,
+                                            zufällige Personen auf der Strasse
+                                            testen zu lassen und die Meinung zu
+                                            sagen, ist hervorragend, da es sehr
+                                            glaubwürdig wirkt. Grundsätzlich
+                                            lässt er das Produkt immer für sich
+                                            selbst sprechen, was auch das
+                                            Produkt gut wirken lässt, da die
+                                            Reaktionen im Werbevideo nicht so
+                                            wären.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Wirkung</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Durch die Werbung wirkt das Produkt
+                                            sehr gut und überzeugend. Sie
+                                            vermittelt Qualität und den Nutzen
+                                            des Produkts, setzt aber auch hohe
+                                            Ansprüche. Durch die Einfachheit des
+                                            Videos wirkt alles auch sehr
+                                            authentisch und löst in Kunden ein
+                                            lockeres Gefühl aus, wo man sich
+                                            nicht zum Kaufen gezwungen fühlt, es
+                                            aber zumindest gerne ausprobieren
+                                            würde.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Virale Faktoren</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Diese Werbung geht vor allem wegen
+                                            der krassen und ehrlichen Reaktionen
+                                            der Testpersonen viral. Andere
+                                            Werbungen von Freeways entstehen in
+                                            Zusammenarbeit mit Influencern,
+                                            welche deshalb viral gehen. Die
+                                            krassen Reaktionen lösen oft
+                                            Interaktionen von den Kunden aus,
+                                            was die Videos im Algorithmus pusht
+                                            und so noch mehr Menschen angezeigt
+                                            werden. Besonders wichtig ist im
+                                            Social-Media-Bereich, dass die
+                                            Werbung den Zuschauer unterhält und
+                                            so das Video bis zum Schluss
+                                            anschaut.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Kritik</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Die einzige Kritik, welche man an
+                                            den Werbungen oder insbesondere
+                                            dieser ausüben kann, geht die
+                                            Glaubwürdigkeit an. Man könnte
+                                            vermuten, die Reaktionen sind
+                                            überspitzt und abgesprochen.
+                                        </p>
+                                        <h4
+                                            class="text-pretty text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl mt-4">
+                                            Fazit</h4>
+                                        <p class="text-lg text-gray-600">
+                                            Freeways setzt mit dieser Werbung
+                                            vor allem auf das Produkt. Die
+                                            Werbung ist einfach und ehrlich
+                                            produziert und versucht nicht direkt
+                                            etwas zu verkaufen und lässt die
+                                            Reaktionen der Leute für sich
+                                            sprechen. Durch die Menge an
+                                            positiven Reaktionen und bekannten
+                                            Influencer, welche das Produkt für
+                                            gut empfinden, baut man ein
+                                            Vertrauen auf und möchte das Produkt
+                                            selbst ausprobieren.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+        <script src="scripts/cookies.js"></script>
+        <script src="scripts/auth.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script>
         setSessionToken();
     </script>
-</body>
+    </body>
 
 </html>
